@@ -1,0 +1,38 @@
+.container-navigate {
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-navigate hr {
+  width: 30vw;
+  margin-left: -6vw;
+  background-color: #fff;
+}
+
+.container-navigate .btn {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: .5vh 0;
+  margin-left: -6vw;
+  font-size: .8vw;
+}
+
+.container-navigate .btn:hover {
+  scale: 1.2;
+  transition: all 0.3s ease-in;
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+.swiper-button-up,
+.swiper-button-down {
+  z-index: 10;
+  cursor: pointer;
+}

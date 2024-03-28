@@ -1,0 +1,90 @@
+.acl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conAcl {
+  position: relative;
+  overflow: hidden;
+  margin-top: -10vh;
+}
+
+.conAcl .containerdir {
+  width: 80vw;
+  height: 75vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.conAcl .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.conAcl .square1 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.conAcl .square2 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.conAcl .square3 {
+  right: 0;
+  top: 60vh;
+}
+
+.conAcl .dir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 69vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  padding: 2vw;
+}
+
+.conAcl .dir .containerAcl {
+  width: 20vw;
+  height: 60vh;
+  text-align: center;
+  font-size: 1.5vw;
+  margin-top: -20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conAcl .dir .containerAcl .containerImg {
+  width: 17vw;
+  height: 40vh;
+  margin-bottom: 10vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.conAcl .dir .containerAcl .accessImg{
+  background-image: url(../assets/access.png);
+}
+
+.conAcl .dir .containerAcl .directImg{
+  background-image: url(../assets/directive.svg);
+}
+
+.conAcl .dir .containerAcl .statusImg{
+  background-image: url(../assets/status.svg);
+}

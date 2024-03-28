@@ -1,0 +1,27 @@
+.background {
+  position: absolute;
+  z-index: -1;
+}
+
+.background .back {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background .back1 {
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 25% 100%);
+    background-color: #f001;
+}
+
+.background .back2 {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+    background-color: #f001;
+}
+
+.background .back3 {
+    clip-path: polygon(75% 0, 100% 0, 100% 100%, 35% 100%);
+    background-color: #f001;
+}

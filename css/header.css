@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: pop;
+}
+
+@font-face {
+  font-family: pop;
+  src: url(../assets/FontsFree-Net-Poppins-Medium.ttf);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #190306;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.main{
+  /* background-color: #0f0; */
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+header .container-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  width: 95vw;
+  padding: 2vh 0 0 2vw;
+}
+header .container-menu hr {
+  width: 91vw;
+  height: 0.05vw;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  margin-top: 2vh;
+}
+header .container-menu .menu-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 91vw;
+  height: 5vh;
+  padding: 0 1vw;
+}
+header .container-menu .menu-bar .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8vw;
+}
+header .container-menu .menu-bar .menu .menu-sand {
+  width: 2.2vw;
+  height: 2.2vw;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+header .container-menu .menu-bar .menu .menu-sand::before{
+    content: '';
+    position: absolute;
+    width: 1.8vw;
+    height: 3px;
+    margin: auto;
+}
+
+header .container-menu .menu-bar .menu p {
+  font-size: 1vw;
+}
+
+header .container-menu .menu-bar .container-user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25vw;
+}
+header .container-menu .menu-bar .container-user-info .user-info-name {
+  font-size: 1.2vw;
+  border: 0.1vw solid #fff;
+  padding: .5vh 5vw;
+  border-radius: 5vw;
+}
+header .container-menu .menu-bar .container-user-info .user-info-img {
+  width: 3vw;
+  height: 3vw;
+  background-color: #fff;
+  border-radius: 50%;
+}
+header .container-bell {
+  margin: 2vh;
+  z-index: 30;
+}
+header .container-bell .bell {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px #1e1e1e;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+header .container-bell .bell i {
+  font-size: 2vw;
+  margin: 0.25vw 0.35vw;
+}
+
+header .container-bell .bell span {
+  position: absolute;
+  top: -1.25vh;
+  right: -1.75vh;
+  color: #fff;
+  width: 1.5vw;
+  height: 1.5vw;
+  padding: 0 0.25vw;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 1vw;
+}

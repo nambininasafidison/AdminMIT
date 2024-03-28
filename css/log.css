@@ -1,0 +1,101 @@
+.conLog h3 {
+  text-align: center;
+  color: #fff;
+  margin-top: 2vw;
+  font-size: xx-large;
+}
+
+
+.conLog .principale .box {
+  background-color: #fff;
+  border-radius: 2vw;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  width: 65vw;
+  height: 75vh;
+  clip-path: polygon(36% 0%, 47% 9%, 100% 9%, 100% 100%, 0% 100%, 0% 0%);
+}
+.conLog .principale .box .border-clip {
+  border-radius: 10%;
+  margin: 1vh 0 0 -23vw;
+  padding: 0.08vh 0.06vw;
+  width: 16vw;
+  height: 10vh;
+  background-color: #000;
+  font-weight: bold;
+  clip-path: polygon(60% 0%, 110% 75%, 110% 160%, 0% 160%, 0% 0%);
+}
+
+.conLog .principale .box .clip_bas {
+  border-radius: 10%;
+  width: 15.86vw;
+  height: 9.8vh;
+  font-weight: bold;
+  padding: 2vh;
+  clip-path: polygon(60% 0%, 110% 75%, 110% 160%, 0% 160%, 0% 0%);
+  background-color: #fff;
+}
+
+.conLog .principale .box .table {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0px 2px 0px;
+  margin-top: 3vw;
+  width: 100%;
+  background-color: #0f0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 57vh;
+}
+.conLog .principale .box .table .th {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  position: relative;
+  height: 5vh;
+  font-size: 0.8vw;
+}
+.conLog .principale .box .table .th0 {
+  left: -9vw;
+  background-color: #f00;
+}
+.conLog .principale .box .table .th1 {
+  left: 17vw;
+  background-color: #f00;
+}
+.conLog .principale .box .table .th3 {
+  background-color: #000;
+}
+.conLog .principale .box .table .th3 {
+  padding: 0;
+}
+.conLog .principale .box .table .th0 .contenu {
+  margin-left: 18vw;
+}
+.conLog .principale .box .table .th1 .contenu {
+  margin-left: -8vw;
+}
+
+.conLog .principale .box .table .tr:last-child {
+  margin-bottom: 150px;
+}
+.conLog .principale .box .table .th .contenu {
+  display: flex;
+  width: 80vw;
+  padding: 10px 30px;
+  background-color: #000;
+  border-radius: inherit;
+}
+.conLog .principale .box .table .tr .contenu {
+  background-color: #f00;
+}
+.conLog .principale .box .table .th .contenu h1 {
+  color: #fff;
+  width: 10vw;
+  margin: 0.2vh 1vw;
+}

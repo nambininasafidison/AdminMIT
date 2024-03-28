@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="package/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/navigate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/notification.css" />
+    <link rel="stylesheet" href="css/log-stat.css" />
+    <link rel="stylesheet" href="css/proxy.css" />
+    <link rel="stylesheet" href="css/stat.css" />
+    <link rel="stylesheet" href="css/acl.css" />
+    <link rel="stylesheet" href="css/acl-access.css" />
+    <link rel="stylesheet" href="css/acl-directive.css" />
+    <link rel="stylesheet" href="css/acl-status.css" />
+    <link rel="stylesheet" href="css/log.css" />
+    <link rel="stylesheet" href="css/dhcp.css" />
+  </head>
+  <body>
+    <header>
+      <section class="container-menu">
+        <div class="menu-bar">
+          <div class="menu">
+            <div class="menu-sand"></div>
+            <p>Admin</p>
+          </div>
+          <div class="container-user-info">
+            <div class="user-info-name">
+              <p>Mr Tahiry</p>
+            </div>
+            <div class="user-info-img"></div>
+          </div>
+        </div>
+        <hr />
+      </section>
+      <section class="container-bell">
+        <button class="bell">
+          <span>10</span>
+          <i class="fa fa-bell"></i>
+        </button>
+      </section>
+      <section class="background">
+        <div class="back back1"></div>
+        <div class="back back2"></div>
+        <div class="back back3"></div>
+      </section>
+      <section class="container-notification">
+        <div class="notif-title">
+          <p>NOTIFICATIONS</p>
+        </div>
+        <section class="all-notif"></section>
+      </section>
+    </header>
+    <section class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide stat">
+          <section class="container-charts">
+            <section class="chart-top">
+              <div class="chart-top-left">
+                <div class="container-chart-traffic">
+                  <canvas id="chart-traffic" width="500" height="200"></canvas>
+                </div>
+                <div class="containerdir"></div>
+              </div>
+              <div class="chart-top-right">
+                <div class="container-chart-traffic-content">
+                  <canvas id="chart-traffic-content"></canvas>
+                </div>
+                <div class="containerdirChart"></div>
+              </div>
+            </section>
+            <section class="chart-bottom">
+              <div class="chart-bottom-left">
+                <div class="proxy-state"></div>
+              </div>
+              <div class="chart-bottom-center">
+                <div class="navigate-level-sitePop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="container-chart-sitePop">
+                  <canvas id="chart-sitePop"></canvas>
+                </div>
+              </div>
+              <div class="chart-bottom-right">
+                <div class="container-chart-proxyCharge">
+                  <canvas id="chart-proxyCharge"></canvas>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container-vertical">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide admin">
+                  <div class="conAdmin">
+                    <div class="containerImg proxyImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Configurer votre proxy</h1>
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                  <div class="conAdmin">
+                    <div class="containerImg aclImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Gerer votre ACL</h1>
+                      </div>
+
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide admin">
+                  <div class="conAdmin">
+                    <div class="containerImg logImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Superviser vos logs et vos stats</h1>
+                      </div>
+
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                  <div class="conAdmin">
+                    <div class="containerImg dhcpImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Configurer votre serveur dhcp</h1>
+                      </div>
+
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="container-navigate">
+              <button class="btn swiper-button-up">
+                <i class="fa fa-arrow-up"></i>
+              </button>
+              <hr />
+              <button class="btn swiper-button-down">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container-vertical">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide acl">
+                <div class="conAcl">
+                  <div class="dir">
+                    <div class="containerAcl">
+                      <div class="containerImg accessImg"></div>
+                      <h1>access</h1>
+                    </div>
+                    <div class="containerAcl">
+                      <div class="containerImg directImg"></div>
+                      <h1>directive</h1>
+                    </div>
+                    <div class="containerAcl">
+                      <div class="containerImg statusImg"></div>
+                      <h1>status</h1>
+                    </div>
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+              <div class="swiper-slide acl">
+                <section class="acl-access">
+                  <div class="acl-access-box">
+                    <div class="logo"></div>
+                    <div class="table">
+                      <div class="th">
+                        <div class="mac-and-ip">
+                          <h1>Nom</h1>
+                          <h1>Accès</h1>
+                        </div>
+                        <div class="actions">
+                          <h1>Actions</h1>
+                        </div>
+                      </div>
+                      <div class="tbody">
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>access1</h1>
+                            <button class="access">Autoriser</button>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>access1</h1>
+                            <button class="access">Autoriser</button>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>access1</h1>
+                            <button class="access">Autoriser</button>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submit">
+                      <button class="button">Ajouter</button>
+                      <button class="button">Restaurer</button>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="swiper-slide acl">
+                <section class="acl-directive">
+                  <div class="acl-directive-box">
+                    <div class="logo"></div>
+                    <div class="select">
+                      <div>
+                        <label for="type">Type :</label>
+                        <select id="type" name="type">
+                          <option>Ip</option>
+                          <option>Domain_name</option>
+                          <option>Port</option>
+                          <option>Time</option>
+                          <option>HTTP_Method</option>
+                          <option>File</option>
+                          <option>HTTP_Status</option>
+
+                          <option>URL</option>
+                          <option>Mac</option>
+                          <option>Protocol</option>
+                          <option>Username</option>
+                          <option>Peer_name</option>
+                          <option>Server_name</option>
+                          <option>Operative_word</option>
+                          <option>Processing_step</option>
+                          <option>Snmp_community</option>
+                          <option>Max_user_ip</option>
+                          <option>Max_connection</option>
+                          <option>Connection_mark</option>
+                        </select>
+                      </div>
+                      <a href="#">Voir Historique</a>
+                    </div>
+                    <div class="table">
+                      <div class="th">
+                        <div class="mac-and-ip">
+                          <h1>Nom</h1>
+                          <h1>Détails</h1>
+                        </div>
+                        <div class="actions">
+                          <h1>Actions</h1>
+                        </div>
+                      </div>
+                      <div class="tbody">
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>rule1</h1>
+                            <h1>détail1</h1>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>rule2</h1>
+                            <h1>détail2</h1>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>rule3</h1>
+                            <h1>détail3</h1>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submit">
+                      <button class="button">Ajouter</button>
+                      <button class="button">Restaurer</button>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="swiper-slide acl">
+                <section class="acl-status">
+                  <div class="acl-status-box">
+                    <div class="logo"></div>
+                    <div class="content">
+                      <div class="th">
+                        <h1>Noms</h1>
+                        <h1>Statut</h1>
+                      </div>
+                      <div class="data">
+                        <p>Noms</p>
+                        <button>Active</button>
+                      </div>
+                      <div class="data">
+                        <p>Noms</p>
+                        <button>Active</button>
+                      </div>
+                      <div class="data">
+                        <p>Noms</p>
+                        <button>Active</button>
+                      </div>
+                    </div>
+                    <span class="red-square"></span>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <section class="container-navigate">
+              <button class="btn swiper-button-up">
+                <i class="fa fa-arrow-up"></i>
+              </button>
+              <hr />
+              <button class="btn swiper-button-down">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container-vertical">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide dhcp">
+                <div class="conDhcp">
+                  <div class="dir">
+                    <div class="containerDhcp">
+                      <div class="dhcpImg"></div>
+                      <h1>configurer votre serveur dhcp</h1>
+                    </div>
+                    <div class="containerInput">
+                      <div class="input">
+                        <label for="reseau"> reseau</label>
+                        <input id="reseau" type="text" />
+                      </div>
+                      <div class="input">
+                        <label for="cid"> CIDR</label>
+                        <input id="cid" type="text" />
+                      </div>
+                      <div class="input">
+                        <label for="dns"> DNS</label>
+                        <input id="dns" type="text" />
+                      </div>
+                      <button class="suivant">suivant</button>
+                    </div>
+                  </div>
+                  <div class="square square1"></div>
+                  <div class="square square2"></div>
+                  <div class="square square3"></div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+              <div class="swiper-slide dhcp">
+                <div class="conDhcp dhcp1">
+                  <div class="dir">
+                    <div class="containerDhcp">
+                      <div class="dhcpImg"></div>
+                      <h1>Plage d'IP</h1>
+                    </div>
+                    <div class="containerInput">
+                      <div class="line">
+                        <button>L1</button>
+                        <input id="L1" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>L2</button>
+                        <input id="L2" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>L3</button>
+                        <input id="L3" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>M1</button>
+                        <input id="M1" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>M2</button>
+                        <input id="M2" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>Pat</button>
+                        <input id="pat" type="text" />
+                      </div>
+                    </div>
+
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+                <button class="configurer">configurer</button>
+              </div>
+            </div>
+            <section class="container-navigate">
+              <button class="btn swiper-button-up">
+                <i class="fa fa-arrow-up"></i>
+              </button>
+              <hr />
+              <button class="btn swiper-button-down">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container-vertical">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide proxy">
+                <div class="conProxy">
+                  <div class="dir">
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+              <div class="swiper-slide proxy">
+                <div class="conProxy">
+                  <div class="dir">
+                    <form action="http://www.proxy.com/test.php" method="post">
+                      <div class="left">
+                        <div class="port">
+                          <label for="port">port</label>
+                          <select id="port" name="port">
+                            <option value="3128">3128</option>
+                            <option value="8080">8080</option>
+                          </select>
+                        </div>
+                        <div class="sens">
+                          <label for="sensL">cache</label>
+                          <select id="sensL" name="contact">
+                            <option value="1">Système de fichier</option>
+                            <option value="2">Memoire</option>
+                          </select>
+                          <div class="option"></div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="input">
+                          <label for="max">
+                            Taille maximale de mis en cache (en MB):
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            name="taille"
+                            id="max"
+                            placeholder="4 MB"
+                          />
+                        </div>
+                        <div class="input">
+                          <label for="min">
+                            Temps minimum de mis en cache :
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            name="min_time"
+                            id="min"
+                            placeholder="15 hours"
+                          />
+                        </div>
+                        <div class="input">
+                          <label for="cachemin">
+                            Temps maximum de mis en cache :
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            name="max_time"
+                            id="cachemin"
+                            placeholder="24 hours"
+                          />
+                        </div>
+                        <div class="input">
+                          <label for="sensR">
+                            Format des fichiers journaux :
+                          </label>
+                          <select id="sensR" name="log">
+                            <option value="common">common</option>
+                            <option value="squid">squid</option>
+                          </select>
+                        </div>
+                        <div class="input">
+                          <label for="host">
+                            Nom d'hôte que Squid affiche aux clients :
+                          </label>
+                          <input
+                            type="text"
+                            name="hote"
+                            id="host"
+                            placeholder="www.example.com"
+                          />
+                        </div>
+                      </div>
+                    </form>
+
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+              <div class="swiper-slide proxy proxy1">
+                <div class="conProxy conf">
+                  <div class="dir">
+                    <div class="input">
+                      <label for="host"> Jamais mettre en cache </label>
+                      <input
+                        type="text"
+                        name="url_never"
+                        id=""
+                        placeholder="*.mp3 *.avi"
+                      />
+                    </div>
+                    <div class="input">
+                      <label for="host"> Télécharger directement </label>
+                      <input
+                        type="text"
+                        name="url_download"
+                        id=""
+                        placeholder="*.exe *.zip"
+                      />
+                    </div>
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+                <input class="submit" type="submit" value="Configure" />
+              </div>
+            </div>
+            <section class="container-navigate">
+              <button class="btn swiper-button-up">
+                <i class="fa fa-arrow-up"></i>
+              </button>
+              <hr />
+              <button class="btn swiper-button-down">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-slide logStat">
+          <div class="conLogStat">
+            <div class="dir">
+              <div class="left">
+                <a href="">
+                  <div class="log"></div>
+                </a>
+                <h1>Log</h1>
+              </div>
+              <div class="right">
+                <a href="">
+                  <div class="stat"></div>
+                </a>
+                <h1>Statistiques</h1>
+              </div>
+              <div class="square square1"></div>
+              <div class="square square2"></div>
+              <div class="square square3"></div>
+            </div>
+            <div class="containerdir"></div>
+          </div>
+        </div>
+        <div class="swiper-slide log">
+          <div class="conLog">
+            <h3>Analyse des logs</h3>
+            <section class="principale">
+              <div class="box">
+                <div class="border-clip">
+                  <div class="clip_bas">
+                    <p>tri : durée</p>
+                    <p></p>
+                    <p>utilisateur : userX</p>
+                    <p>periode : 00/00/0000-00/00/0000</p>
+                  </div>
+                </div>
+                <div class="table">
+                  <div class="th th1 th3">
+                    <div class="contenu">
+                      <h1>sites accédés</h1>
+                      <h1>acces</h1>
+                      <h1>octets</h1>
+                      <h1>durée</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th0">
+                    <div class="contenu">
+                      <h1>www.linkedin.com</h1>
+                      <h1>56</h1>
+                      <h1>100.10M</h1>
+                      <h1>00:02:27</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th1">
+                    <div class="contenu">
+                      <h1>www.youtube.com</h1>
+                      <h1>29</h1>
+                      <h1>300.85M</h1>
+                      <h1>00:01:05</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th0">
+                    <div class="contenu">
+                      <h1>www.discord.com</h1>
+                      <h1>18</h1>
+                      <h1>200.00M</h1>
+                      <h1>00:00:50</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th1">
+                    <div class="contenu">
+                      <h1>www.facebook.com</h1>
+                      <h1>10</h1>
+                      <h1>50.56M</h1>
+                      <h1>00:00:42</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th0">
+                    <div class="contenu">
+                      <h1>www.tinder.com</h1>
+                      <h1>40</h1>
+                      <h1>68.23M</h1>
+                      <h1>00:00:40</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
+
+    <script src="package/swiper-bundle.js"></script>
+    <script src="js/chart.js-4.4.2/package/dist/chart.umd.js"></script>
+    <script src="js/stat.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/notif.js"></script>
+    <script src="js/proxy.js"></script>
+  </body>
+</html>

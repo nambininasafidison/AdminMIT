@@ -1,0 +1,184 @@
+.stat {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stat .containerdir {
+  width: 50vw;
+  height: 46vh;
+  background-color: #d9d9d9;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 15% 0, 20% 9%, 97% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.stat .container-charts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat .container-charts .chart-top {
+  display: flex;
+  width: 94vw;
+  justify-content: space-between;
+  /* margin-left: -3vw; */
+}
+
+.stat .container-charts .chart-top .chart-top-left {
+  position: relative;
+}
+
+.stat .container-charts .chart-top .chart-top-left .container-chart-traffic {
+  width: 54vw;
+  height: 42vh;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 4vh;
+  left: 0;
+  z-index: 2;
+}
+
+.stat .container-charts .chart-top .chart-top-right {
+  position: relative;
+  top: 6vh;
+  z-index: 2;
+}
+
+.stat .container-charts .chart-top .chart-top-right .containerdirChart {
+  width: 34vw;
+  height: 45vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: -4.5vh;
+  z-index: -1;
+  clip-path: polygon(0% 20%, 5% 10%, 80% 10%, 85% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.stat
+  .container-charts
+  .chart-top
+  .chart-top-right
+  .container-chart-traffic-content {
+  width: 34vw;
+  border-radius: 1.5vw;
+  height: 40.5vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat
+  .container-charts
+  .chart-top
+  .chart-top-right
+  .container-chart-traffic-content
+  .chart-traffic-content {
+  display: block;
+}
+
+.stat .container-charts .chart-bottom {
+  display: flex;
+  margin-top: 2vh;
+  justify-content: space-evenly;
+  width: 100vw;
+  /* margin-left: -3vw; */
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-left {
+  display: block;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-left .proxy-state {
+  width: 29vw;
+  height: 40vh;
+  background-color: #fff;
+  border-radius: 1vw;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stat
+  .container-charts
+  .chart-bottom
+  .chart-bottom-center
+  .container-chart-sitePop {
+  width: 29vw;
+  height: 40vh;
+  border-radius: 1vw;
+  background-color: #202124;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat
+  .container-charts
+  .chart-bottom
+  .chart-bottom-center
+  .container-chart-sitePop
+  .chart-sitePop {
+  display: block;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-right {
+  display: block;
+}
+
+.stat
+  .container-charts
+  .chart-bottom
+  .chart-bottom-right
+  .container-chart-proxyCharge {
+  width: 29vw;
+  height: 40vh;
+  border-radius: 1vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat
+  .container-charts
+  .chart-bottom
+  .chart-bottom-right
+  .container-chart-proxyCharge
+  .chart-proxyCharge {
+  display: block;
+}
+
+.stat .new-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.438);
+  backdrop-filter: blur(2px);
+}
+
+.stat .new-container .new-container-chart-traffic {
+  width: 54vw;
+  height: 42vh;
+  background-color: #8a0a0a;
+  display: flex;
+  justify-content: center;
+  border-radius: 1.5vw;
+  z-index: 60;
+}

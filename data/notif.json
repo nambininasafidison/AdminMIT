@@ -1,0 +1,36 @@
+[
+    {
+        "type":"pc",
+        "event":"nottaken",
+        "info":{
+            "name":"rakoto",
+            "firstName":"rabe",
+            "level":"L1"
+        },
+        "isLate":true,
+        "date":"18/03/2024-23:17:42"
+    },
+    {
+        "type":"pc",
+        "event":"nottaken",
+        "info":{
+            "name":"rakoto",
+            "firstName":"rabe",
+            "level":"L1"
+        },
+        "isLate":false,
+        "typeNotLate":"nottaken",
+        "date":"18/03/2024-23:17:42"
+    },
+    {
+        "type":"account",
+        "event":"create",
+        "accountType":"ADMIN",
+        "info":{
+            "name":"rakoto",
+            "firstName":"rabe",
+            "level":"L1"
+        },
+        "date":"18/03/2024-23:56:42"
+    }
+]

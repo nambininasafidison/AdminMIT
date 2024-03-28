@@ -1,0 +1,257 @@
+.proxy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proxy1 {
+  flex-direction: column;
+  position: relative;
+  top: 0;
+}
+
+.conProxy {
+  position: relative;
+  overflow: hidden;
+}
+
+.conProxy .containerdir {
+  width: 60vw;
+  height: 66vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.conProxy .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.conProxy .square1 {
+  right: -4vw;
+  top: 30vh;
+}
+
+.conProxy .square2 {
+  right: -2vw;
+  top: 40vh;
+}
+
+.conProxy .square3 {
+  right: 0;
+  top: 50vh;
+}
+
+.conProxy .dir {
+  width: 60vw;
+  height: 60vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vw;
+}
+
+.conProxy .dir form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 56vw;
+  height: 50vh;
+}
+
+.conProxy .dir .left {
+  width: 20vw;
+  height: 45vh;
+  position: relative;
+}
+
+.conProxy .dir .left .port {
+  position: relative;
+  left: 2.5vw;
+  height: 10vh;
+}
+
+.conProxy .dir .left .port select {
+  width: 15vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 0.8vw;
+}
+
+.conProxy .dir .left .port label {
+  position: absolute;
+  font-size: 1vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conProxy .dir .left .sens {
+  position: relative;
+  left: 2.5vw;
+  z-index: 2;
+}
+
+.conProxy .dir .left .sens select {
+  width: 15vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 0.8vw;
+}
+
+.conProxy .dir .left .sens label {
+  position: absolute;
+  font-size: 1vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conProxy .dir .left .sens .option {
+  border: 1px solid #000;
+  border-radius: 1vw;
+  width: 18vw;
+  position: absolute;
+  top: 2.5vh;
+  left: -1.5vw;
+  z-index: -1;
+  padding: 3vh 0.5vw 2vh 0.5vw;
+  height: 36vh;
+}
+
+.conProxy .dir .left .sens .option .input {
+  position: relative;
+  left: 0;
+  margin: 3vh 0;
+}
+
+.conProxy .dir .left .sens .option .input input {
+  width: 17vw;
+  height: 5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 0.8vw;
+  color: #000;
+}
+
+.conProxy .dir .left .sens .option .input input::placeholder {
+  color: #999;
+}
+
+.conProxy .dir .left .sens .option .input label {
+  position: absolute;
+  font-size: 0.8vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conProxy .dir .right {
+  z-index: 4;
+  width: 30vw;
+  height: 55vh;
+  padding-left: 3vw;
+}
+
+.conProxy .dir .right .input {
+  position: relative;
+  left: 0;
+  margin: 4.5vh 0;
+}
+
+.conProxy .dir .right .input input,
+select {
+  width: 22vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 1vw;
+  color: #000;
+}
+
+.conProxy .dir .right .input input::placeholder {
+  color: #999;
+}
+
+.conProxy .dir .right .input label {
+  position: absolute;
+  font-size: 0.8vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conf {
+  height: 66vh;
+  margin-top: -15vh;
+}
+
+.conf .containerdir {
+  width: 25vw;
+  height: 66vh;
+  background-color: #fff;
+}
+
+.conf .dir {
+  width: 25vw;
+  height: 60vh;
+}
+
+.conf .dir .input {
+  position: relative;
+  left: 2.5vw;
+  height: 10vh;
+  margin: 5vh 0 7vh 0;
+}
+
+.conf .dir .input input {
+  width: 17vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 1vw;
+  font-size: 0.8vw;
+}
+
+.conf .dir .input label {
+  position: absolute;
+  font-size: 1vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.proxy1 .submit {
+  background: none;
+  border-radius: 1.5vw;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.5vw;
+  padding: 0.5vh 1vw;
+  margin-top: 2vh;
+}
