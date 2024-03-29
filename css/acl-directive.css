@@ -101,6 +101,21 @@
   overflow-y: auto;
   height: 30vh;
 }
+
+.acl-directive .acl-directive-box .table .tbody::-webkit-scrollbar {
+  width: 0.5vw;
+  margin: 0 1vw;
+}
+
+.acl-directive .acl-directive-box .table .tbody::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 1vw;
+}
+.acl-directive .acl-directive-box .table .tbody::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 1vw;
+}
+
 .acl-directive .acl-directive-box .table .th {
   display: flex;
   width: 100%;
@@ -171,7 +186,7 @@
   width: 100%;
   padding-bottom: 1vh;
 }
-.acl-directive .button {
+.acl-directive .submit button {
   display: block;
   font-size: 1vw;
   width: 20%;
@@ -181,6 +196,142 @@
   border: none;
   padding: 1vh;
 }
+
+.add-directive {
+  position: absolute;
+  width: 94vw;
+  height: 79vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: #190306;
+}
+
+.add-directive .containeradd {
+  position: relative;
+}
+
+.add-directive .containerdir {
+  width: 55vw;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 20% 0, 25% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.add-directive .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.add-directive .square1 {
+  right: -6vw;
+  top: 30vh;
+}
+
+.add-directive .square2 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.add-directive .square3 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.add-directive .dir {
+  width: 55vw;
+  height: 59vh;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.add-directive .section {
+  width: 43vw;
+  height: 8vh;
+}
+
+.add-directive .section hr {
+  background-color: #000;
+  border: none;
+  height: 1px;
+  width: 43vw;
+  margin: 2vh 0;
+}
+
+.add-directive .s1 input{
+  border-radius: 4vw;
+  height: 5vh;
+  border: .5px solid #000;
+  width: 18vw;
+  font-size: 1vw;
+  padding: 0 .8vw;
+  color: #999;
+}
+
+.add-directive .s2 {
+  height: 31vh;
+}
+
+.add-directive .s3 {
+  height: 14vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-directive button {
+  border: none;
+  border-radius: 2vw;
+  padding: 1vh;
+}
+
+.add-directive .plus {
+  width: 2vw;
+  height: 2vw;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  padding: 0;
+  background-color: #f00;
+  color: #fff;
+}
+
+.add-directive .btns{
+  display: flex;
+  justify-content: space-between;
+  width: 43vw;
+}
+
+.add-directive .btns button{
+  width: 6vw;
+  font-size: .8vw;
+  background-color: #999;
+}
+
+.add-directive .btns .ok{
+  background-color: #f00;
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .acl-directive .acl-directive-box {
     width: 90vw;

@@ -70,7 +70,7 @@
 }
 
 .acl-access .acl-access-box .table .tbody::-webkit-scrollbar {
-  width: 0.3vw;
+  width: 0.5vw;
   margin: 0 1vw;
 }
 
@@ -166,7 +166,7 @@
   padding-bottom: 1vh;
 }
 
-.acl-access .button {
+.acl-access .submit button {
   display: block;
   font-size: 1vw;
   width: 20%;
@@ -175,6 +175,141 @@
   background-color: rgb(4, 34, 54);
   border: none;
   padding: 1vh;
+}
+
+.add-access {
+  position: absolute;
+  width: 94vw;
+  height: 79vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: #190306;
+}
+
+.add-access .containeradd {
+  position: relative;
+}
+
+.add-access .containerdir {
+  width: 55vw;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 20% 0, 25% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.add-access .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.add-access .square1 {
+  right: -6vw;
+  top: 30vh;
+}
+
+.add-access .square2 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.add-access .square3 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.add-access .dir {
+  width: 55vw;
+  height: 59vh;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.add-access .section {
+  width: 43vw;
+  height: 8vh;
+}
+
+.add-access .section hr {
+  background-color: #000;
+  border: none;
+  height: 1px;
+  width: 43vw;
+  margin: 2vh 0;
+}
+
+.add-access .s1 input{
+  border-radius: 4vw;
+  height: 5vh;
+  border: .5px solid #000;
+  width: 18vw;
+  font-size: 1vw;
+  padding: 0 .8vw;
+  color: #999;
+}
+
+.add-access .s2 {
+  height: 31vh;
+}
+
+.add-access .s3 {
+  height: 14vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-access button {
+  border: none;
+  border-radius: 2vw;
+  padding: 1vh;
+}
+
+.add-access .plus {
+  width: 2vw;
+  height: 2vw;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  padding: 0;
+  background-color: #f00;
+  color: #fff;
+}
+
+.add-access .btns{
+  display: flex;
+  justify-content: space-between;
+  width: 43vw;
+}
+
+.add-access .btns button{
+  width: 6vw;
+  font-size: .8vw;
+  background-color: #999;
+}
+
+.add-access .btns .ok{
+  background-color: #f00;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {

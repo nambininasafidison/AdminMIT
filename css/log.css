@@ -50,6 +50,21 @@
   overflow-y: auto;
   height: 57vh;
 }
+
+.conLog .principale .box .table::-webkit-scrollbar {
+  width: 0.5vw;
+  margin: 0 1vw;
+}
+
+.conLog .principale .box .table::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 1vw;
+}
+.conLog .principale .box .table::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 1vw;
+}
+
 .conLog .principale .box .table .th {
   display: flex;
   width: 100%;
