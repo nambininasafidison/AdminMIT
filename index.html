@@ -214,7 +214,7 @@
                   <div class="containeradd">
                     <div class="dir">
                       <div class="section s1">
-                        <input type="text">
+                        <input type="text" />
                         <hr />
                       </div>
                       <div class="section s2"></div>
@@ -297,7 +297,7 @@
                   <div class="containeradd">
                     <div class="dir">
                       <div class="section s1">
-                        <input type="text">
+                        <input type="text" />
                         <hr />
                       </div>
                       <div class="section s2"></div>
@@ -342,23 +342,24 @@
                           <option>Snmp_community</option>
                           <option>Max_user_ip</option>
                           <option>Max_connection</option>
-                          <option>Connection_mark</option>
+                          <option>Header_name</option>
+                          <option>Authentification</option>
                         </select>
                       </div>
                       <a href="#">Voir Historique</a>
                     </div>
                     <div class="table">
                       <div class="th">
-                        <div class="mac-and-ip">
-                          <h1>Nom</h1>
-                          <h1>Détails</h1>
+                        <div id="title" class="mac-and-ip">
+                          <!-- <h1>Nom</h1>
+                          <h1>Détails</h1> -->
                         </div>
                         <div class="actions">
                           <h1>Actions</h1>
                         </div>
                       </div>
-                      <div class="tbody">
-                        <div class="th tr">
+                      <div id="directive" class="tbody">
+                        <!-- <div class="th tr">
                           <div class="mac-and-ip">
                             <h1>rule1</h1>
                             <h1>détail1</h1>
@@ -393,12 +394,12 @@
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                     <div class="submit">
                       <button class="directive-add-btn">Ajouter</button>
-                      <button class="directive-reset-btn">Restaurer</button>
+                      <button id="restore" class="directive-reset-btn">Restaurer</button>
                     </div>
                   </div>
                 </section>
@@ -691,6 +692,48 @@
             <div class="containerdir"></div>
           </div>
         </div>
+        <!-- History -->
+        <div class="swiper-slide log">
+          <div class="conLog">
+            <h3>Historique ACL</h3>
+            <section class="principale">
+              <div class="box">
+                <div class="filter">
+                  <i class="fa fa-search"></i
+                  ><input id="filter_History" type="text" />
+                  <i class="fa fa-date"></i
+                  ><input id="history_date" type="date" />
+                </div>
+                <div id="history" class="table">
+                  <!--<div class="th th1 th3">
+            <div class="contenu">
+              <h1>Date</h1>
+              <h1>Historique</h1>
+            </div>
+          </div>
+          <div class="th tr th0">
+            <div class="contenu">
+              <h1>www.linkedin.com</h1>
+              <h1>56</h1>
+              <h1>100.10M</h1>
+              <h1>00:02:27</h1>
+            </div>
+          </div>
+          <div class="th tr th1">
+            <div class="contenu">
+              <h1>www.youtube.com</h1>
+              <h1>29</h1>
+              <h1>300.85M</h1>
+              <h1>00:01:05</h1>
+            </div>
+          </div>-->
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- End of my part -->
         <div id="log" class="swiper-slide log">
           <div class="conLog">
             <h3>Analyse des logs</h3>
@@ -758,6 +801,9 @@
             </section>
           </div>
         </div>
+      </div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </section>
 
     <script src="package/swiper-bundle.js"></script>
@@ -767,5 +813,6 @@
     <script src="js/notif.js"></script>
     <script src="js/proxy.js"></script>
     <script src="js/acl.js"></script>
+    <script src="js/back.js"></script>
   </body>
 </html>

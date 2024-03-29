@@ -113,3 +113,35 @@
   width: 10vw;
   margin: 0.2vh 1vw;
 }
+
+#history .tr , #history .th{
+  height: auto;
+  max-height: 20vh;
+} 
+
+#history .tr .contenu h1 , #history .th .contenu h1 {
+    color: #fff;
+    width: auto;
+    max-width: 60%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0.2vh 1vw;
+}
+
+.filter {
+  position: relative;
+  right: 0;
+  margin-top: 58px;
+  margin-left: 88%;
+  width: 100%;
+}
+
+#filter_History, #history_date {
+  background: none;
+  height: 5vh;
+  width: 15vw;
+  border-radius: 60px;
+  padding: 0 1vw;
+  border: 1px solid #000;
+  margin-left: 2vw;
+}
