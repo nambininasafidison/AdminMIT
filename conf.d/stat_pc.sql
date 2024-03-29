@@ -1,0 +1,2 @@
+CREATE VIEW stat_pc AS SELECT retrait.id_pc AS id_pc, retrait.date AS date_retrait, remise.date AS date_remise FROM presence AS retrait LEFT JOIN presence AS remise ON (retrait.id_pc = remise.id_pc AND retrait.statut=1 AND remise.statut=0 AND retrait.date < remise.date) WHERE retrait.statut = 1;
+SELECT id_pc, date_retrait FROM stat_pc WHERE date_remise IS NULL;

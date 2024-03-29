@@ -22,4 +22,8 @@ function restore(){
     write_history("All modification in this type is restored.");
 }
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 9be874fe8af66702d99c14a05e3034208c20f695

@@ -66,4 +66,8 @@
         mysqli_close($connect);
     }
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 9be874fe8af66702d99c14a05e3034208c20f695
