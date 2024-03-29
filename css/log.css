@@ -34,7 +34,7 @@
   width: 15.86vw;
   height: 9.8vh;
   font-weight: bold;
-  padding: 2vh;
+  padding: 1vh;
   clip-path: polygon(60% 0%, 110% 75%, 110% 160%, 0% 160%, 0% 0%);
   background-color: #fff;
 }
@@ -114,9 +114,11 @@
   margin: 0.2vh 1vw;
 }
 
+
 #history .tr , #history .th{
   height: auto;
   max-height: 20vh;
+  background-color: #f00;
 } 
 
 #history .tr .contenu h1 , #history .th .contenu h1 {
@@ -131,7 +133,7 @@
 .filter {
   position: relative;
   right: 0;
-  margin-top: 58px;
+  margin-top: 10vh;
   margin-left: 88%;
   width: 100%;
 }
@@ -145,3 +147,5 @@
   border: 1px solid #000;
   margin-left: 2vw;
 }
+
+
