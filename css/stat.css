@@ -22,7 +22,7 @@
 
 .stat .container-charts .chart-top {
   display: flex;
-  width: 94vw;
+  width: 93vw;
   justify-content: space-between;
   /* margin-left: -3vw; */
 }

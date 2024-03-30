@@ -23,6 +23,19 @@
   </head>
   <body>
     <header>
+      <section class="others-menu-bar">
+        <button class="exit">X</button>
+        <h1>Pages</h1>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#admin">Admin Menu</a></li>
+          <li><a href="#acl">Acl</a></li>
+          <li><a href="#dhcp">Dhcp</a></li>
+          <li><a href="#proxy">Proxy</a></li>
+          <li><a href="#logStat">Gog and stat</a></li>
+          <li><a href="#log">Log</a></li>
+        </ul>
+      </section>
       <section class="container-menu">
         <div class="menu-bar">
           <div class="menu">
@@ -58,7 +71,7 @@
     </header>
     <section class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide stat">
+        <div id="dashboard" class="swiper-slide stat">
           <section class="container-charts">
             <section class="chart-top">
               <div class="chart-top-left">
@@ -97,7 +110,7 @@
             </section>
           </section>
         </div>
-        <div class="swiper-slide">
+        <div id="admin" class="swiper-slide">
           <div class="swiper-container-vertical">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -171,7 +184,7 @@
             </section>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="acl" class="swiper-slide">
           <div class="swiper-container-vertical">
             <div class="swiper-wrapper">
               <div class="swiper-slide acl">
@@ -197,6 +210,29 @@
                 </div>
               </div>
               <div class="swiper-slide acl">
+                <section class="add-access">
+                  <div class="containeradd">
+                    <div class="dir">
+                      <div class="section s1">
+                        <input type="text">
+                        <hr />
+                      </div>
+                      <div class="section s2"></div>
+                      <div class="section s3">
+                        <button class="plus">+</button>
+                        <hr />
+                        <div class="btns">
+                          <button class="cancel">annuler</button>
+                          <button class="ok">confirmer</button>
+                        </div>
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </section>
                 <section class="acl-access">
                   <div class="acl-access-box">
                     <div class="logo"></div>
@@ -250,8 +286,8 @@
                       </div>
                     </div>
                     <div class="submit">
-                      <button class="button">Ajouter</button>
-                      <button class="button">Restaurer</button>
+                      <button class="access-add-btn">Ajouter</button>
+                      <button class="access-reset-btn">Restaurer</button>
                     </div>
                   </div>
                 </section>
@@ -259,6 +295,29 @@
 
 <!-- My part -->
               <div class="swiper-slide acl">
+                <section class="add-directive">
+                  <div class="containeradd">
+                    <div class="dir">
+                      <div class="section s1">
+                        <input type="text">
+                        <hr />
+                      </div>
+                      <div class="section s2"></div>
+                      <div class="section s3">
+                        <button class="plus">+</button>
+                        <hr />
+                        <div class="btns">
+                          <button class="cancel">annuler</button>
+                          <button class="ok">confirmer</button>
+                        </div>
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </section>
                 <section class="acl-directive">
                   <div class="acl-directive-box">
                     <div class="logo"></div>
@@ -306,8 +365,13 @@
                       </div>
                     </div>
                     <div class="submit">
+<<<<<<< HEAD
                       <button class="button">Ajouter</button>
                       <button id="restore" class="button">Restaurer</button>
+=======
+                      <button class="directive-add-btn">Ajouter</button>
+                      <button class="directive-reset-btn">Restaurer</button>
+>>>>>>> c48132aab6aca39cdb75cc9b5980e8614c36d262
                     </div>
                   </div>
                 </section>
@@ -350,6 +414,7 @@
             </section>
           </div>
         </div>
+<<<<<<< HEAD
 
   <!-- History -->
         <div class="swiper-slide log">
@@ -393,6 +458,9 @@
 <!-- End of my part -->
 
         <div class="swiper-slide">
+=======
+        <div id="dhcp" class="swiper-slide">
+>>>>>>> c48132aab6aca39cdb75cc9b5980e8614c36d262
           <div class="swiper-container-vertical">
             <div class="swiper-wrapper">
               <div class="swiper-slide dhcp">
@@ -478,7 +546,7 @@
             </section>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="proxy" class="swiper-slide">
           <div class="swiper-container-vertical">
             <div class="swiper-wrapper">
               <div class="swiper-slide proxy">
@@ -620,7 +688,7 @@
             </section>
           </div>
         </div>
-        <div class="swiper-slide logStat">
+        <div id="logStat" class="swiper-slide logStat">
           <div class="conLogStat">
             <div class="dir">
               <div class="left">
@@ -642,7 +710,7 @@
             <div class="containerdir"></div>
           </div>
         </div>
-        <div class="swiper-slide log">
+        <div id="log" class="swiper-slide log">
           <div class="conLog">
             <h3>Analyse des logs</h3>
             <section class="principale">
@@ -709,9 +777,9 @@
             </section>
           </div>
         </div>
-      </div>
+      <!-- </div>
       <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-next"></div> -->
     </section>
 
     <script src="package/swiper-bundle.js"></script>
@@ -720,6 +788,10 @@
     <script src="js/index.js"></script>
     <script src="js/notif.js"></script>
     <script src="js/proxy.js"></script>
+<<<<<<< HEAD
     <script src="js/back.js"></script>
+=======
+    <script src="js/acl.js"></script>
+>>>>>>> c48132aab6aca39cdb75cc9b5980e8614c36d262
   </body>
 </html>

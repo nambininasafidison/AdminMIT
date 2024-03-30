@@ -18,9 +18,9 @@ body {
   z-index: 0;
 }
 
-.main{
+.main {
   /* background-color: #0f0; */
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
   height: 90vh;
   width: 100vw;
 }
@@ -29,8 +29,8 @@ header {
   width: 100vw;
   height: 10vh;
   display: flex;
-  position: absolute;
-  top: 0;
+  /* position: relative;
+  top: 0; */
 }
 header .container-menu {
   display: flex;
@@ -65,18 +65,20 @@ header .container-menu .menu-bar .menu .menu-sand {
   width: 2.2vw;
   height: 2.2vw;
   background-color: #fff;
-  padding: 0 .4vw;
+  padding: 0 0.4vw;
   border-radius: 50%;
   position: relative;
   color: #000;
   font-size: 1.5vw;
+  border: none;
+  cursor: pointer;
 }
-header .container-menu .menu-bar .menu .menu-sand::before{
-    content: '';
-    position: absolute;
-    width: 1.8vw;
-    height: 3px;
-    margin: auto;
+header .container-menu .menu-bar .menu .menu-sand::before {
+  content: "";
+  position: absolute;
+  width: 1.8vw;
+  height: 3px;
+  margin: auto;
 }
 
 header .container-menu .menu-bar .menu p {
@@ -92,7 +94,7 @@ header .container-menu .menu-bar .container-user-info {
 header .container-menu .menu-bar .container-user-info .user-info-name {
   font-size: 1.2vw;
   border: 0.1vw solid #fff;
-  padding: .5vh 5vw;
+  padding: 0.5vh 5vw;
   border-radius: 5vw;
 }
 header .container-menu .menu-bar .container-user-info .user-info-img {
@@ -103,7 +105,7 @@ header .container-menu .menu-bar .container-user-info .user-info-img {
   font-size: 2vw;
   border: none;
   color: #000;
-  padding: 0 .6vw;
+  padding: 0 0.6vw;
 }
 header .container-bell {
   margin: 2vh;
@@ -117,6 +119,8 @@ header .container-bell .bell {
   box-shadow: 1px 1px 10px #1e1e1e;
   transition: all 0.3s ease-in-out;
   position: relative;
+  border: none;
+  cursor: pointer;
 }
 
 header .container-bell .bell i {
@@ -136,4 +140,52 @@ header .container-bell .bell span {
   background-color: red;
   font-size: 1vw;
   border: none;
+}
+
+header .others-menu-bar {
+  position: absolute;
+  width: 20vw;
+  height: 100vh;
+  background: linear-gradient(to top left, #fff, #777);
+  top: 0;
+  left: 0;
+  z-index: 60;
+  padding-top: 2vh;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+header .others-menu-bar button {
+  position: absolute;
+  top: 0.2vh;
+  right: 0.1vw;
+  border: none;
+  background-color: #f00;
+  color: #fff;
+  padding: 0 0.8vw;
+  font-size: 1.2vw;
+  border-radius: 0.2vw;
+}
+
+header .others-menu-bar h1 {
+  font-size: 2.5vw;
+  margin-left: -5vw;
+}
+
+header .others-menu-bar ul {
+  list-style: none;
+}
+
+header .others-menu-bar a {
+  color: #190306;
+  text-decoration: none;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+header .others-menu-bar a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
 }
