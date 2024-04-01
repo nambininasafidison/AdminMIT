@@ -50,6 +50,17 @@ function modify($data){
             }
             $_SESSION["declaration"][$data['lineM']]=$modified;
             $_SESSION["declaration"]=array_values($_SESSION["declaration"]);
+            // $reponse = shell_exec("systemctl restart squid");
+            // if($reponse==0){
+            //     alert($reponse);
+            //     write_history("This declaration \"$toModify\" is modified to \"$modified\"");
+            //     put_datas();
+            // }
+            // else {
+            //     $errorMessage = shell_exec('echo $status');
+            //     echo json_encode(["Error" => $errorMessage]);
+            //     exit(0);
+            // }
             write_history("This declaration \"$toModify\" is modified to \"$modified\"");
             put_datas();
         }

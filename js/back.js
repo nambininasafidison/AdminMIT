@@ -24,7 +24,6 @@ document.querySelector("#filter_History").addEventListener('input',async functio
 
 document.querySelector("#history_date").addEventListener('change',async function(event){
     search = event.target.value;
-    alert("sdfghjkl");
     requete = "SELECT* FROM history_acl WHERE DATE(date) LIKE '"+search+"%' ORDER BY date DESC;";
     history(requete);
 });

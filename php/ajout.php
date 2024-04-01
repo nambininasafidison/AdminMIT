@@ -71,6 +71,16 @@ function add($data){
         $_SESSION["declaration"][]=$added;
         write_history("This declaration is added: \" $added \"");
         put_datas();
+        // $reponse = shell_exec("systemctl restart squid");
+        // if($reponse==0){
+        //     write_history("This declaration is added: \" $added \"");
+        //     put_datas();
+        // }
+        // else {
+        //     $errorMessage = shell_exec('echo $status');
+        //     echo json_encode(["Error" => $errorMessage]);
+        //     exit(0);
+        // }
     }
     else {echo json_encode(["Error" => "The name must be unique. Enter another."]);exit(0);}
 }
