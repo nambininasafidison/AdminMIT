@@ -7,6 +7,16 @@
   margin-top: 10vh;
   padding: 0 2vw;
 }
+
+.acl-directive .containeradd .dir .s1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acl-directive .containeradd .dir .s1 input , .acl-directive .containeradd .dir .s1 label {
+  display: block;
+}
+
 .acl-directive label {
   display: inline;
   font-size: 1vw;
@@ -29,6 +39,7 @@
   margin-left: 3vw;
   border: 1px solid #000;
 }
+
 .acl-directive option {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1vw;
@@ -44,6 +55,7 @@
   margin-top: -10vh;
   position: relative;
 }
+
 .acl-directive .acl-directive-box {
   margin: auto;
   width: 80vw;
@@ -58,6 +70,7 @@
   padding: 15vh 2.5vw 0 2.5vw;
   height: 72vh;
 }
+
 .acl-directive .acl-directive-box::before {
   content: "";
   position: absolute;
@@ -68,6 +81,7 @@
   background-color: #fff;
   border-radius: 20px 0px 0px 0px;
 }
+
 .acl-directive .acl-directive-box::after {
   content: "";
   position: absolute;
@@ -78,6 +92,7 @@
   background-color: #fff;
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
 }
+
 .acl-directive .acl-directive-box .logo {
   background-image: url("../assets/directive.svg");
   background-position: center;
@@ -89,6 +104,7 @@
   position: absolute;
   top: -6vh;
 }
+
 .acl-directive .acl-directive-box .table {
   display: flex;
   flex-direction: column;
@@ -111,6 +127,7 @@
   background: #555;
   border-radius: 1vw;
 }
+
 .acl-directive .acl-directive-box .table .tbody::-webkit-scrollbar-thumb {
   background: #222;
   border-radius: 1vw;
@@ -121,13 +138,16 @@
   width: 100%;
   height: 6vh;
 }
+
 .acl-directive .acl-directive-box .table .tr {
   height: 6vh;
   margin: 1vh 0;
 }
+
 .acl-directive .acl-directive-box .table .tr:last-child {
   margin-bottom: 150px;
 }
+
 .acl-directive .acl-directive-box .table .th .mac-and-ip {
   display: flex;
   align-items: center;
@@ -137,36 +157,44 @@
   background-color: #000;
   clip-path: polygon(0% 0%, 98% 0%, 100% 100%, 0% 100%);
 }
+
 .acl-directive .acl-directive-box .table .tr .mac-and-ip {
   background-color: #f00;
 }
+
 .acl-directive .acl-directive-box .table .th .mac-and-ip h1 {
   color: #fff;
 }
+
 .acl-directive .acl-directive-box .table .th .actions {
   background-color: #000;
   padding: 1vh;
   width: 20%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 8% 100%);
 }
+
 .acl-directive .acl-directive-box .table .tr .actions {
   background-color: #f00;
   padding: 1.3vh;
   color: #fff;
   font-size: 1.2vw;
 }
+
 .acl-directive .acl-directive-box .table .th .actions h1 {
   color: #fff;
   text-align: center;
 }
+
 .acl-directive .acl-directive-box .table .tr .actions .logo-actions {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .acl-directive .acl-directive-box .table .tr .actions .logo-actions .edit {
   cursor: pointer;
 }
+
 .acl-directive .acl-directive-box .table .tr .actions .logo-actions .supp {
   cursor: pointer;
 }
@@ -186,6 +214,7 @@
   width: 100%;
   padding-bottom: 1vh;
 }
+
 .acl-directive .submit button {
   display: block;
   font-size: 1vw;
@@ -196,6 +225,7 @@
   border: none;
   padding: 1vh;
 }
+
 
 .add-directive {
   position: absolute;
@@ -277,7 +307,7 @@
   margin: 2vh 0;
 }
 
-.add-directive .s1 input{
+#add-content input, .add-directive .s1 input,.add-directive .s2 input{
   border-radius: 4vw;
   height: 5vh;
   border: .5px solid #000;
@@ -285,10 +315,30 @@
   font-size: 1vw;
   padding: 0 .8vw;
   color: #999;
+  margin:1vw;
+}
+
+#add-content select{
+  display: block;
+  margin: 1vw;
 }
 
 .add-directive .s2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 7vh;
   height: 31vh;
+}
+
+.add-directive .s2 select, .add-directive .s2 input, .add-directive .s2 div p input {
+  width:16vw;
+} 
+
+.add-directive .s2 div,.add-directive .s2 p {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .add-directive .s3 {
@@ -313,6 +363,7 @@
   padding: 0;
   background-color: #f00;
   color: #fff;
+  display: none;
 }
 
 .add-directive .btns{

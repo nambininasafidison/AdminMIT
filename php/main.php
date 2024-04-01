@@ -8,8 +8,10 @@
                 $todisplay=array($nom,$none,$val);
             else
                 $todisplay=array($nom,$val,$none);                            
-        }else $todisplay=array($nom,$val);
-
+        }else {
+            if($_SESSION["type"]=="File")sscanf($val,"-i %[^$]",$val);
+            $todisplay=array($nom,$val);
+        }
         return $todisplay;
     }
 
@@ -40,13 +42,13 @@
             $decl = file_get_contents($path);
             $declaration=array();
             $declaration= explode("\n",$decl);
-    //        $declaration = $_SESSION["declaration"];
+
             $GLOBAL['line']=0;
-            //$line=$declaration[0];
+
             foreach($declaration as $line){
                 sscanf($line,"acl %s %[^$]",$rName,$inutile);
                 if($data["name"]==$rName){
-                    if(($data['lineM']==$GLOBAL['line'])&&($_SESSION['type']==$key)){
+                    if(isset($data['lineM'])&&($data['lineM']==$GLOBAL['line'])&&($_SESSION['type']==$key)){
                         continue;
                     }
                     else{
@@ -61,13 +63,13 @@
     
     function write_history($history){
         $connect = mysqli_connect("localhost","root","root")or die("Impossible d'ouvrir le fichier.");
+        mysqli_query($connect,"CREATE DATABASE IF NOT EXISTS mit;");
         mysqli_select_db($connect,"mit");
+        mysqli_query($connect,"CREATE TABLE IF NOT EXISTS history_acl(date timestamp DEFAULT current_timestamp(), action VARCHAR(255));");
         mysqli_query($connect,"INSERT INTO history_acl (action) VALUES ('$history');");
         mysqli_close($connect);
     }
 
-<<<<<<< HEAD
+//mila database: ./:write_history(); sy php/history.php:put_history(), 
 ?>
-=======
-?>
->>>>>>> 9be874fe8af66702d99c14a05e3034208c20f695
+

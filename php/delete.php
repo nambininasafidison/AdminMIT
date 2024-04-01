@@ -27,8 +27,6 @@ function suppr_line($dt){
     $GLOBAL['line']=$_SESSION['declaration'][$_GET['lineD']];
     unset($_SESSION['declaration'][$_GET['lineD']]);
     $_SESSION['declaration']=array_values($_SESSION['declaration']);
-    
-    write_history("This declaration is supprimed: \"{$GLOBAL['line']}\"(with all access which depend on it).");
 
 //Delet access which depends on this acl
     // $dt=file_get_contents('/etc/squid/conf.d/access.conf');
@@ -43,12 +41,8 @@ function suppr_line($dt){
                 fwrite($f,$d."\n");
             }
         }
+        write_history("This declaration is supprimed: \"{$GLOBAL['line']}\"(with all access which depend on it).");
     }else echo json_encode(array("message"=>"Impossible d'ouvrir le fichier."));
     fclose($f);
 }
-
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 9be874fe8af66702d99c14a05e3034208c20f695
