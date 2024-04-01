@@ -32,7 +32,7 @@
           <li><a href="#acl">Acl</a></li>
           <li><a href="#dhcp">Dhcp</a></li>
           <li><a href="#proxy">Proxy</a></li>
-          <li><a href="#logStat">Gog and stat</a></li>
+          <li><a href="#logStat">Log and stat</a></li>
           <li><a href="#log">Log</a></li>
         </ul>
       </section>
@@ -190,18 +190,30 @@
               <div class="swiper-slide acl">
                 <div class="conAcl">
                   <div class="dir">
-                    <div class="containerAcl">
-                      <div class="containerImg accessImg"></div>
-                      <h1>access</h1>
-                    </div>
-                    <div class="containerAcl">
-                      <div class="containerImg directImg"></div>
-                      <h1>directive</h1>
-                    </div>
-                    <div class="containerAcl">
-                      <div class="containerImg statusImg"></div>
-                      <h1>status</h1>
-                    </div>
+                    <button class="access-link">
+                      <a href="#access-link">
+                        <div class="containerAcl">
+                          <div class="containerImg accessImg"></div>
+                          <h1>access</h1>
+                        </div>
+                      </a>
+                    </button>
+                    <button class="directive-link">
+                      <a href="#directive-link">
+                        <div class="containerAcl">
+                          <div class="containerImg directImg"></div>
+                          <h1>directive</h1>
+                        </div>
+                      </a>
+                    </button>
+                    <button class="status-link">
+                      <a href="#status-link">
+                        <div class="containerAcl">
+                          <div class="containerImg statusImg"></div>
+                          <h1>status</h1>
+                        </div>
+                      </a>
+                    </button>
                     <div class="square square1"></div>
                     <div class="square square2"></div>
                     <div class="square square3"></div>
@@ -209,7 +221,7 @@
                   <div class="containerdir"></div>
                 </div>
               </div>
-              <div class="swiper-slide acl">
+              <div id="access-link" class="swiper-slide acl">
                 <section class="add-access">
                   <div class="containeradd">
                     <div class="dir">
@@ -293,8 +305,13 @@
                 </section>
               </div>
 
+<<<<<<< HEAD
 <!-- Tsanta's part -->
               <div class="swiper-slide acl">
+=======
+              <!-- My part -->
+              <div id="directive-link" class="swiper-slide acl">
+>>>>>>> 3d6095a8636e385e5885d9b07fc116fbc60e7f60
                 <section class="add-directive">
                   <div class="containeradd">
                     <div class="dir">
@@ -349,7 +366,7 @@
                           <option>Authentification</option>
                         </select>
                       </div>
-                      <a href="#">Voir Historique</a>
+                      <a class="history-link" href="#history-link">Voir Historique</a>
                     </div>
                     <div class="table">
                       <div class="th">
@@ -374,7 +391,7 @@
                   </div>
                 </section>
               </div>
-              <div class="swiper-slide acl">
+              <div id="status-link" class="swiper-slide acl">
                 <section class="acl-status">
                   <div class="acl-status-box">
                     <div class="logo"></div>
@@ -643,14 +660,15 @@
         <div id="logStat" class="swiper-slide logStat">
           <div class="conLogStat">
             <div class="dir">
+              
               <div class="left">
-                <a href="">
+                <a href="#log" class="log-link">
                   <div class="log"></div>
                 </a>
                 <h1>Log</h1>
               </div>
               <div class="right">
-                <a href="">
+                <a href="#dashboard" class="stat-link">
                   <div class="stat"></div>
                 </a>
                 <h1>Statistiques</h1>
@@ -663,7 +681,7 @@
           </div>
         </div>
         <!-- History -->
-        <div class="swiper-slide log">
+        <div id="history-link" class="swiper-slide log">
           <div class="conLog">
             <h3>Historique ACL</h3>
             <section class="principale">
@@ -779,9 +797,15 @@
     <script src="package/swiper-bundle.js"></script>
     <script src="js/chart.js-4.4.2/package/dist/chart.umd.js"></script>
     <script src="js/stat.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/notif.js"></script>
     <script src="js/proxy.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="js/index.js"></script>
+    <script src="js/dhcp.js"></script>
+    <script src="js/notif.js"></script>
+    
+    <!--<script src="js/back.js"></script>-->
+>>>>>>> 3d6095a8636e385e5885d9b07fc116fbc60e7f60
     <script src="js/acl.js"></script>
     <script src="js/back.js"></script>
   </body>

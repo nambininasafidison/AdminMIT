@@ -146,7 +146,7 @@ header .others-menu-bar {
   position: absolute;
   width: 20vw;
   height: 100vh;
-  background: linear-gradient(to top left, #fff, #777);
+  backdrop-filter: blur(10px);
   top: 0;
   left: 0;
   z-index: 60;
@@ -154,7 +154,8 @@ header .others-menu-bar {
   display: none;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  background-color: #fff9;
 }
 
 header .others-menu-bar button {
@@ -171,11 +172,24 @@ header .others-menu-bar button {
 
 header .others-menu-bar h1 {
   font-size: 2.5vw;
-  margin-left: -5vw;
+  margin-left: .5vw;
 }
 
 header .others-menu-bar ul {
   list-style: none;
+  margin-left: 2vw;
+}
+
+header .others-menu-bar li{
+  width: 14vw;
+  
+}
+
+header .others-menu-bar li:hover{
+  background-color: #190306;
+
+  border-left: .3vw solid #f00;
+  padding: 0 .5vw;
 }
 
 header .others-menu-bar a {
@@ -185,7 +199,7 @@ header .others-menu-bar a {
   cursor: pointer;
 }
 
-header .others-menu-bar a:hover {
-  text-decoration: underline;
+header .others-menu-bar li:hover a{
   font-weight: bolder;
+  color: #fff;
 }

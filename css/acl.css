@@ -77,14 +77,24 @@
   background-size: cover;
 }
 
-.conAcl .dir .containerAcl .accessImg{
+.conAcl .dir .containerAcl .accessImg {
   background-image: url(../assets/access.png);
 }
 
-.conAcl .dir .containerAcl .directImg{
+.conAcl .dir .containerAcl .directImg {
   background-image: url(../assets/directive.svg);
 }
 
-.conAcl .dir .containerAcl .statusImg{
+.conAcl .dir .containerAcl .statusImg {
   background-image: url(../assets/status.svg);
+}
+
+.conAcl button {
+  background: none;
+  border: none;
+}
+
+.conAcl a {
+  text-decoration: none;
+  color: #000;
 }
