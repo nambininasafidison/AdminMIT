@@ -31,12 +31,49 @@
   position: relative;
 }
 
+.stat .container-charts .chart-top .chart-top-left .contains {
+  width: 53vw;
+  height: 33vh;
+  padding-left: 0.5vw;
+}
+
+.stat .container-charts .chart-top .chart-top-left .contains canvas {
+  margin-left: 0.5vw;
+}
+
+.stat .container-chart-traffic-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat .contains {
+  display: flex;
+}
+
+.stat .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.stat .buttons button {
+  border-radius: 0.5vw;
+  width: 2.5vw;
+  height: 4vh;
+  border: 1px solid #000;
+  font-size: 0.8vw;
+  background: none;
+  font-weight: bolder;
+}
+
 .stat .container-charts .chart-top .chart-top-left .container-chart-traffic {
   width: 54vw;
   height: 42vh;
   background-color: #d9d9d9;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
   border-radius: 1.5vw;
   position: absolute;
   top: 4vh;
@@ -44,10 +81,52 @@
   z-index: 2;
 }
 
+.stat .container-charts .chart-top .chart-top-left .container-chart-traffic h1{
+margin-left: 7vw;
+}
+
+.stat
+  .container-charts
+  .chart-top
+  .chart-top-left
+  .container-chart-traffic
+  .selection {
+  display: flex;
+  justify-content: left;
+}
+
+.stat .container-charts h1 {
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.stat .container-charts .selections {
+  position: relative;
+  left: 0;
+}
+
+.stat .container-charts select {
+  height: 4vh;
+  padding: 0 0.5vw;
+  width: 7vw;
+  border-radius: 0.4vw;
+  background: none;
+  margin: .4vh .3vw;
+}
+
 .stat .container-charts .chart-top .chart-top-right {
   position: relative;
   top: 6vh;
   z-index: 2;
+}
+
+.stat .container-charts .chart-top .chart-top-right .contains {
+  width: 33vw;
+  height: 33vh;
+}
+
+.stat .container-charts .chart-top .chart-top-right .contains canvas {
+  margin-left: 6.5vw;
 }
 
 .stat .container-charts .chart-top .chart-top-right .containerdirChart {
@@ -58,7 +137,15 @@
   position: absolute;
   top: -4.5vh;
   z-index: -1;
-  clip-path: polygon(0% 20%, 5% 10%, 80% 10%, 85% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(
+    0% 20%,
+    5% 10%,
+    80% 10%,
+    85% 0,
+    100% 0%,
+    100% 100%,
+    0 100%
+  );
 }
 
 .stat
@@ -96,6 +183,15 @@
   display: block;
 }
 
+/* .stat .container-charts .chart-bottom .chart-bottom-left .contains {
+  width: 33vw;
+  height: 33vh;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-left .contains canvas{
+  margin-left: 6.5vw;
+} */
+
 .stat .container-charts .chart-bottom .chart-bottom-left .proxy-state {
   width: 29vw;
   height: 40vh;
@@ -107,6 +203,26 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  color: #fff;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-center .contains {
+  width: 26.5vw;
+  color: #fff;
+  height: 33vh;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-center .contains .buttons {
+margin-left: -.5vw;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-center .contains button {
+  border-color: #fff;
+  color: #fff;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-center .contains canvas {
+  margin-left: .5vw;
 }
 
 .stat
@@ -134,6 +250,15 @@
 
 .stat .container-charts .chart-bottom .chart-bottom-right {
   display: block;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-right .contains {
+  width: 28vw;
+  height: 33vh;
+}
+
+.stat .container-charts .chart-bottom .chart-bottom-right .contains canvas {
+  margin-left: 4vw;
 }
 
 .stat

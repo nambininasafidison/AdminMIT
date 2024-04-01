@@ -89,11 +89,6 @@
   background-image: url(../assets/status.svg);
 }
 
-.conAcl button {
-  background: none;
-  border: none;
-}
-
 .conAcl a {
   text-decoration: none;
   color: #000;

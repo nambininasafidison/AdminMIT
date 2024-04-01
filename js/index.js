@@ -16,28 +16,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
-const navlinks = document.querySelectorAll(".others-menu-bar ul li a");
-
-navlinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute("href");
-    const targetSection = document.querySelector(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
 var swiperHorizontal = new Swiper(".swiper-container", {
   direction: "horizontal",
   loop: true,
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
+  nested: true,
 });
 
 var swiperVertical = new Swiper(".swiper-container-vertical", {
@@ -48,6 +30,40 @@ var swiperVertical = new Swiper(".swiper-container-vertical", {
     prevEl: ".swiper-button-up",
   },
 });
+
+// const navlinks = document.querySelectorAll(".others-menu-bar ul li a");
+// const adminLink = document.querySelectorAll(".admin a");
+const aclLink = document.querySelectorAll(".conAcl a");
+
+aclLink.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const slideIndex = parseInt(link.getAttribute("data-slide"), 10);
+        const currentIndex = swiperVertical.activeIndex;
+        const distance1 = Math.abs(slideIndex - currentIndex);
+        const transitionTime = distance1 * 400;
+  
+        swiperVertical.slideTo(slideIndex, transitionTime);
+      });
+    });
+
+// makeLink(navlinks, swiperHorizontal);
+// makeLink(adminLink, swiperHorizontal);
+// makeLink(aclLink, swiperVertical);
+
+// function makeLink(links, swiper) {
+//   links.forEach((link) => {
+//     link.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       const slideIndex = parseInt(link.getAttribute("data-slide"), 10);
+//       const currentIndex = swiper.activeIndex;
+//       const distance1 = Math.abs(slideIndex - currentIndex);
+//       const transitionTime = distance1 * 400;
+
+//       swiper.slideTo(slideIndex, transitionTime);
+//     });
+//   });
+// }
 
 document.addEventListener("keydown", (e) => {
   switch (e.key) {

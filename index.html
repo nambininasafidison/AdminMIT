@@ -27,19 +27,22 @@
         <button class="exit">X</button>
         <h1>Pages</h1>
         <ul>
-          <li><a href="#dashboard">Dashboard</a></li>
-          <li><a href="#admin">Admin Menu</a></li>
-          <li><a href="#acl">Acl</a></li>
-          <li><a href="#dhcp">Dhcp</a></li>
-          <li><a href="#proxy">Proxy</a></li>
-          <li><a href="#logStat">Log and stat</a></li>
-          <li><a href="#log">Log</a></li>
+          <li><a data-slide="0" href="#dashboard">Dashboard</a></li>
+          <li><a data-slide="1" href="#admin">Admin Menu</a></li>
+          <li><a data-slide="2" href="#acl">Acl</a></li>
+          <li><a data-slide="3" href="#dhcp">Dhcp</a></li>
+          <li><a data-slide="4" href="#proxy">Proxy</a></li>
+          <li><a data-slide="5" href="#logStat">Log and stat</a></li>
+          <li><a data-slide="6" href="#log">Historiques acl</a></li>
+          <li><a data-slide="7" href="#log">Log</a></li>
         </ul>
       </section>
       <section class="container-menu">
         <div class="menu-bar">
           <div class="menu">
-            <button class="menu-sand"><i class="fa fa-bars"></i></button>
+            <button class="menu-sand">
+              <i style="pointer-events: none" class="fa fa-bars"></i>
+            </button>
             <p>Admin</p>
           </div>
           <div class="container-user-info">
@@ -76,13 +79,51 @@
             <section class="chart-top">
               <div class="chart-top-left">
                 <div class="container-chart-traffic">
-                  <canvas id="chart-traffic" width="500" height="200"></canvas>
+                  <div class="selection">
+                    <div class="selections">
+                      <select name="test1" id="test1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                      <select name="test2" id="test2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                    <h1>Analyse du traffic reseau</h1>
+                  </div>
+                  <div class="contains">
+                    <div class="buttons">
+                      <button class="tous">tous</button>
+                      <button class="L1">L1</button>
+                      <button class="L2">L2</button>
+                      <button class="L3">L3</button>
+                      <button class="M1">M1</button>
+                      <button class="M2">M2</button>
+                    </div>
+                    <canvas id="chart-traffic" height="90"></canvas>
+                  </div>
                 </div>
                 <div class="containerdir"></div>
               </div>
               <div class="chart-top-right">
                 <div class="container-chart-traffic-content">
-                  <canvas id="chart-traffic-content"></canvas>
+                  <div class="selection">
+                    <h1>Traffic par contenu</h1>
+                  </div>
+                  <div class="contains">
+                    <div class="buttons">
+                      <button class="tous">tous</button>
+                      <button class="L1">L1</button>
+                      <button class="L2">L2</button>
+                      <button class="L3">L3</button>
+                      <button class="M1">M1</button>
+                      <button class="M2">M2</button>
+                    </div>
+                    <canvas id="chart-traffic-content"></canvas>
+                  </div>
                 </div>
                 <div class="containerdirChart"></div>
               </div>
@@ -92,19 +133,43 @@
                 <div class="proxy-state"></div>
               </div>
               <div class="chart-bottom-center">
-                <div class="navigate-level-sitePop">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="container-chart-sitePop">
-                  <canvas id="chart-sitePop"></canvas>
+                <div
+                  class="container-chart-sitePop container-chart-traffic-content"
+                >
+                  <div class="selection">
+                    <h1>Sites Web les plus visites</h1>
+                  </div>
+                  <div class="contains">
+                    <div class="buttons">
+                      <button class="tous">tous</button>
+                      <button class="L1">L1</button>
+                      <button class="L2">L2</button>
+                      <button class="L3">L3</button>
+                      <button class="M1">M1</button>
+                      <button class="M2">M2</button>
+                    </div>
+                    <canvas id="chart-sitePop"></canvas>
+                  </div>
                 </div>
               </div>
               <div class="chart-bottom-right">
-                <div class="container-chart-proxyCharge">
-                  <canvas id="chart-proxyCharge"></canvas>
+                <div
+                  class="container-chart-proxyCharge container-chart-traffic-content"
+                >
+                  <div class="selection">
+                    <h1>Charge du serveur proxy</h1>
+                  </div>
+                  <div class="contains">
+                    <div class="buttons">
+                      <button class="tous">tous</button>
+                      <button class="L1">L1</button>
+                      <button class="L2">L2</button>
+                      <button class="L3">L3</button>
+                      <button class="M1">M1</button>
+                      <button class="M2">M2</button>
+                    </div>
+                    <canvas id="chart-proxyCharge"></canvas>
+                  </div>
                 </div>
               </div>
             </section>
@@ -115,61 +180,69 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="swiper-slide admin">
-                  <div class="conAdmin">
-                    <div class="containerImg proxyImg"></div>
-                    <div class="dir">
-                      <div class="container access">
-                        <h1>Configurer votre proxy</h1>
+                  <a data-slide="4" href="#">
+                    <div class="conAdmin">
+                      <div class="containerImg proxyImg"></div>
+                      <div class="dir">
+                        <div class="container access">
+                          <h1>Configurer votre proxy</h1>
+                        </div>
+                        <div class="square square1"></div>
+                        <div class="square square2"></div>
+                        <div class="square square3"></div>
                       </div>
-                      <div class="square square1"></div>
-                      <div class="square square2"></div>
-                      <div class="square square3"></div>
+                      <div class="containerdir"></div>
                     </div>
-                    <div class="containerdir"></div>
-                  </div>
-                  <div class="conAdmin">
-                    <div class="containerImg aclImg"></div>
-                    <div class="dir">
-                      <div class="container access">
-                        <h1>Gerer votre ACL</h1>
-                      </div>
+                  </a>
+                  <a data-slide="2" href="#">
+                    <div class="conAdmin">
+                      <div class="containerImg aclImg"></div>
+                      <div class="dir">
+                        <div class="container access">
+                          <h1>Gerer votre ACL</h1>
+                        </div>
 
-                      <div class="square square1"></div>
-                      <div class="square square2"></div>
-                      <div class="square square3"></div>
+                        <div class="square square1"></div>
+                        <div class="square square2"></div>
+                        <div class="square square3"></div>
+                      </div>
+                      <div class="containerdir"></div>
                     </div>
-                    <div class="containerdir"></div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-slide admin">
-                  <div class="conAdmin">
-                    <div class="containerImg logImg"></div>
-                    <div class="dir">
-                      <div class="container access">
-                        <h1>Superviser vos logs et vos stats</h1>
-                      </div>
+                  <a data-slide="7" href="#">
+                    <div class="conAdmin">
+                      <div class="containerImg logImg"></div>
+                      <div class="dir">
+                        <div class="container access">
+                          <h1>Superviser vos logs et vos stats</h1>
+                        </div>
 
-                      <div class="square square1"></div>
-                      <div class="square square2"></div>
-                      <div class="square square3"></div>
-                    </div>
-                    <div class="containerdir"></div>
-                  </div>
-                  <div class="conAdmin">
-                    <div class="containerImg dhcpImg"></div>
-                    <div class="dir">
-                      <div class="container access">
-                        <h1>Configurer votre serveur dhcp</h1>
+                        <div class="square square1"></div>
+                        <div class="square square2"></div>
+                        <div class="square square3"></div>
                       </div>
-
-                      <div class="square square1"></div>
-                      <div class="square square2"></div>
-                      <div class="square square3"></div>
+                      <div class="containerdir"></div>
                     </div>
-                    <div class="containerdir"></div>
-                  </div>
+                  </a>
+                  <a data-slide="3" href="#">
+                    <div class="conAdmin">
+                      <div class="containerImg dhcpImg"></div>
+                      <div class="dir">
+                        <div class="container access">
+                          <h1>Configurer votre serveur dhcp</h1>
+                        </div>
+
+                        <div class="square square1"></div>
+                        <div class="square square2"></div>
+                        <div class="square square3"></div>
+                      </div>
+                      <div class="containerdir"></div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -190,30 +263,24 @@
               <div class="swiper-slide acl">
                 <div class="conAcl">
                   <div class="dir">
-                    <button class="access-link">
-                      <a href="#access-link">
+                      <a data-slide="1" href="#access-link">
                         <div class="containerAcl">
                           <div class="containerImg accessImg"></div>
                           <h1>access</h1>
                         </div>
                       </a>
-                    </button>
-                    <button class="directive-link">
-                      <a href="#directive-link">
+                      <a data-slide="2" href="#directive-link">
                         <div class="containerAcl">
                           <div class="containerImg directImg"></div>
                           <h1>directive</h1>
                         </div>
                       </a>
-                    </button>
-                    <button class="status-link">
-                      <a href="#status-link">
+                      <a data-slide="3" href="#status-link">
                         <div class="containerAcl">
                           <div class="containerImg statusImg"></div>
                           <h1>status</h1>
                         </div>
                       </a>
-                    </button>
                     <div class="square square1"></div>
                     <div class="square square2"></div>
                     <div class="square square3"></div>
@@ -226,12 +293,69 @@
                   <div class="containeradd">
                     <div class="dir">
                       <div class="section s1">
-                        <input type="text" />
+                        <div class="radio">
+                          <div class="radio1">
+                            <label for="1"> 1</label>
+                            <input id="1" type="radio" />
+                          </div>
+                          <div class="radio1">
+                            <label for="2"> 2</label>
+                            <input id="2" type="radio" />
+                          </div>
+                        </div>
                         <hr />
                       </div>
-                      <div class="section s2"></div>
+                      <div class="section s2">
+                        <div class="checks">
+                          <input id="t1" type="checkbox" />
+                          <label for="t1">test1</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t2" type="checkbox" />
+                          <label for="t2">test2</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t3" type="checkbox" />
+                          <label for="t3">test3</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t4" type="checkbox" />
+                          <label for="t4">test4</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t5" type="checkbox" />
+                          <label for="t5">test5</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t6" type="checkbox" />
+                          <label for="t6">test6</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t1" type="checkbox" />
+                          <label for="t1">test1</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t2" type="checkbox" />
+                          <label for="t2">test2</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t3" type="checkbox" />
+                          <label for="t3">test3</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t4" type="checkbox" />
+                          <label for="t4">test4</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t5" type="checkbox" />
+                          <label for="t5">test5</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t6" type="checkbox" />
+                          <label for="t6">test6</label>
+                        </div>
+                      </div>
                       <div class="section s3">
-                        <button class="plus">+</button>
                         <hr />
                         <div class="btns">
                           <button class="cancel">annuler</button>
@@ -360,7 +484,9 @@
                           <option>Authentification</option>
                         </select>
                       </div>
-                      <a class="history-link" href="#history-link">Voir Historique</a>
+                      <a class="history-link" href="#history-link"
+                        >Voir Historique</a
+                      >
                     </div>
                     <div class="table">
                       <div class="th">
@@ -654,7 +780,6 @@
         <div id="logStat" class="swiper-slide logStat">
           <div class="conLogStat">
             <div class="dir">
-              
               <div class="left">
                 <a href="#log" class="log-link">
                   <div class="log"></div>
@@ -795,7 +920,7 @@
     <script src="js/index.js"></script>
     <script src="js/dhcp.js"></script>
     <script src="js/notif.js"></script>
-    
+
     <!--<script src="js/back.js"></script>-->
     <script src="js/acl.js"></script>
   </body>

@@ -257,22 +257,41 @@
   margin: 2vh 0;
 }
 
-.add-access .s1 input{
-  border-radius: 4vw;
-  height: 5vh;
-  border: .5px solid #000;
-  width: 18vw;
+.add-access .s1 .radio{
+  display: flex;
   font-size: 1vw;
-  padding: 0 .8vw;
-  color: #999;
+}
+
+.add-access .s1 .radio1{
+  margin: 0 1vw;
+}
+
+.add-access .s1 input{
+  width: .7vw;
+  height: .7vw;
+  margin-left: .5vw;
 }
 
 .add-access .s2 {
-  height: 31vh;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.add-access .s2 .checks{
+  display: flex;
+  font-size: 1vw;
+}
+
+.add-access .s2 .checks input{
+  width: .7vw;
+  height: .7vw;
+  margin: .8vh .5vw 0 0;
 }
 
 .add-access .s3 {
-  height: 14vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,16 +302,6 @@
   border: none;
   border-radius: 2vw;
   padding: 1vh;
-}
-
-.add-access .plus {
-  width: 2vw;
-  height: 2vw;
-  font-size: 1.2vw;
-  font-weight: bolder;
-  padding: 0;
-  background-color: #f00;
-  color: #fff;
 }
 
 .add-access .btns{
