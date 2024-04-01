@@ -183,20 +183,21 @@ margin-left: 7vw;
   display: block;
 }
 
-/* .stat .container-charts .chart-bottom .chart-bottom-left .contains {
-  width: 33vw;
+.stat .container-charts .chart-bottom .chart-bottom-left .contains {
+  width: 26.5vw;
   height: 33vh;
 }
 
-.stat .container-charts .chart-bottom .chart-bottom-left .contains canvas{
-  margin-left: 6.5vw;
-} */
+.stat .container-charts .chart-bottom .chart-bottom-left .contains canvas {
+  margin-left: .5vw;
+}
 
 .stat .container-charts .chart-bottom .chart-bottom-left .proxy-state {
   width: 29vw;
   height: 40vh;
   background-color: #fff;
   border-radius: 1vw;
+  padding: 0 .4vw;
 }
 
 .stat .container-charts .chart-bottom .chart-bottom-center {

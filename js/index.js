@@ -31,39 +31,27 @@ var swiperVertical = new Swiper(".swiper-container-vertical", {
   },
 });
 
-// const navlinks = document.querySelectorAll(".others-menu-bar ul li a");
-// const adminLink = document.querySelectorAll(".admin a");
+const navlinks = document.querySelectorAll(".others-menu-bar ul li a");
+const adminLink = document.querySelectorAll(".admin a");
 const aclLink = document.querySelectorAll(".conAcl a");
 
-aclLink.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const slideIndex = parseInt(link.getAttribute("data-slide"), 10);
-        const currentIndex = swiperVertical.activeIndex;
-        const distance1 = Math.abs(slideIndex - currentIndex);
-        const transitionTime = distance1 * 400;
-  
-        swiperVertical.slideTo(slideIndex, transitionTime);
-      });
-    });
-
-// makeLink(navlinks, swiperHorizontal);
-// makeLink(adminLink, swiperHorizontal);
+makeLink(navlinks, swiperHorizontal);
+makeLink(adminLink, swiperHorizontal);
 // makeLink(aclLink, swiperVertical);
 
-// function makeLink(links, swiper) {
-//   links.forEach((link) => {
-//     link.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       const slideIndex = parseInt(link.getAttribute("data-slide"), 10);
-//       const currentIndex = swiper.activeIndex;
-//       const distance1 = Math.abs(slideIndex - currentIndex);
-//       const transitionTime = distance1 * 400;
+function makeLink(links, swiper) {
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const slideIndex = parseInt(link.getAttribute("data-slide"), 10);
+      const currentIndex = swiper.activeIndex;
+      const distance1 = Math.abs(slideIndex - currentIndex);
+      const transitionTime = distance1 * 400;
 
-//       swiper.slideTo(slideIndex, transitionTime);
-//     });
-//   });
-// }
+      swiper.slideTo(slideIndex, transitionTime);
+    });
+  });
+}
 
 document.addEventListener("keydown", (e) => {
   switch (e.key) {

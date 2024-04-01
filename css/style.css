@@ -45,6 +45,10 @@ body {
   align-items: center;
 }
 
+.admin a{
+  color: #000;
+}
+
 .conAdmin {
   position: relative;
 }
