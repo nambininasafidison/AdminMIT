@@ -10,7 +10,10 @@ document.querySelector("#type").addEventListener('change',async function(){
 
 document.querySelector("#restore").addEventListener('click',async function(event){
     var conf= confirmer("Voulez-vous vraiment restaurer les modifications faites?");
-    if(conf){displayData("php/restore.php","");}
+    if(conf){
+        displayData("php/restore.php","");
+        history("SELECT* FROM history_acl ORDER BY date DESC;");
+    }
 });
 
 document.querySelector("#filter_History").addEventListener('input',async function(event){
@@ -26,8 +29,41 @@ document.querySelector("#history_date").addEventListener('change',async function
     history(requete);
 });
 
+document.querySelector("#add_acl").addEventListener('click',function(){
+    var conf = confirmer("Voulez-vous vraiment ajouter ce regle?");
+    if(conf){
+        var data={};
+
+        var div = document.querySelector(".add-directive .containeradd .dir .s1 input");
+
+        data[div.name]=div.value;
+        
+        div = document.querySelectorAll("#add-content input");
+        for(let i of div){
+            data[i.name]=i.value;
+        }
+
+        div = document.querySelectorAll("#add-content select");
+        if(div.length>0){
+            for(let i of div){
+                data[i.name]=i.value;
+            }
+        }
+        displayData("php/ajout.php",data);
+    }
+});
+
 async function displayData(url,donnee){
     var reponse = await postData(url,donnee);
+    if(reponse == null){
+        var link = "error.php?message='There is an error!!'";
+        window.location.href=link;
+    }
+    if((typeof reponse['Error'] !== 'undefined')&&(reponse['Error'] !== null)){
+        var link = "error.php?message="+reponse['Error'];
+        window.location.href=link;
+    }
+
     var body=document.querySelector("#directive");    
     var titre=document.querySelector("#title");
     var i=0;
@@ -95,6 +131,7 @@ async function delet(elt,i){
     if(conf){
         var data = {"lineD":i};
         displayData("php/delete.php",data);
+        history("SELECT* FROM history_acl ORDER BY date DESC;");
     }
 }
 
@@ -139,11 +176,12 @@ function modify(elt,position){
             }        
         }    
         var reponse = displayData("php/modify.php",data);
+        history("SELECT* FROM history_acl ORDER BY date DESC;");
     }
 }
 
 async function postData(url="", donnee={}) {
-    var data;
+    var data = null;
     try {
         const reponse = await fetch(
             url,
@@ -162,7 +200,6 @@ async function postData(url="", donnee={}) {
         }
 
         data = await reponse.json();
-        console.log(data);
     } catch (error) {
         console.error("Error:", error);
     }
@@ -174,6 +211,14 @@ async function history(requetes){
     var body=document.querySelector("#history");
     while (body.firstChild) {
         body.removeChild(body.firstChild);
+    }
+    if(reponse == null){
+        var link = "error.php?message='There is an error!!'";
+        window.location.href=link;
+    }
+    if((typeof reponse['Error'] !== 'undefined')&&(reponse['Error'] !== null)){
+        var link = "error.php?message="+reponse['Error'];
+        window.location.href=link;
     }
     var i=0;
     for(let rep of reponse){

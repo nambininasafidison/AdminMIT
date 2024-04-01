@@ -9,16 +9,17 @@
 
         $GLOBAL["value"]=return_data();
         echo json_encode($GLOBAL["value"]);
+        exit(0);
     }else{
         http_response_code(400);
         header('Content-Type: application/json');
-        $error=["error" => "Aucune donnee recue"];
+        $error=["Error" => "Aucune donnee recue"];
         echo json_encode($error);
+        exit(0);
     }
 
 
 function modify($data){
-//    nameUnique($data)==0
     if(nameUnique($data)==0){    
         $toModify=$_SESSION['declaration'][$data['lineM']];
         $modified="acl ".$data["name"];    
@@ -43,19 +44,16 @@ function modify($data){
             }
             else{
                 if($_SESSION["type"]=="File"){
-                    $data["value"]="\\".$data["value"];
+                    $data["value"]=$data["value"];
                 }
                 $modified.=" ".$_SESSION["attribut"][$_SESSION["type"]]." ".$data["value"];
             }
             $_SESSION["declaration"][$data['lineM']]=$modified;
+            $_SESSION["declaration"]=array_values($_SESSION["declaration"]);
             write_history("This declaration \"$toModify\" is modified to \"$modified\"");
             put_datas();
         }
-        else {echo json_encode(["error" => "Tous les noms doivent etre unique"]);exit(0);}    
+        else {echo json_encode(["Error" => "Tous les noms doivent etre unique"]);exit(0);}    
     }
-   
 ?>
-<<<<<<< HEAD
 
-=======
->>>>>>> 9be874fe8af66702d99c14a05e3034208c20f695

@@ -18,12 +18,8 @@ function restore(){
         }
         fclose($f);
     }     
-
-    write_history("All modification in this type is restored.");
+    $mess = "All modification in type ".$_SESSION["type"]." is restored";
+    $test=write_history($mess);
 }
 
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 9be874fe8af66702d99c14a05e3034208c20f695
