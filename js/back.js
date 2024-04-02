@@ -1,6 +1,6 @@
 var default_url="php/datas.php";
 displayData(default_url,"");
-history("SELECT* FROM history_acl ORDER BY date DESC;");
+//history("SELECT* FROM history_acl ORDER BY date DESC;");
 
 document.querySelector("#type").addEventListener('change',async function(){
     data = {"type": document.querySelector("#type").value};
@@ -12,20 +12,20 @@ document.querySelector("#restore").addEventListener('click',async function(event
     var conf= confirmer("Voulez-vous vraiment restaurer les modifications faites?");
     if(conf){
         displayData("php/restore.php","");
-        history("SELECT* FROM history_acl ORDER BY date DESC;");
+//        history("SELECT* FROM history_acl ORDER BY date DESC;");
     }
 });
 
 document.querySelector("#filter_History").addEventListener('input',async function(event){
     search = event.target.value;
     requete = "SELECT* FROM history_acl WHERE action LIKE '%"+search+"%' ORDER BY date DESC;";
-    history(requete);
+//    history(requete);
 });
 
 document.querySelector("#history_date").addEventListener('change',async function(event){
     search = event.target.value;
     requete = "SELECT* FROM history_acl WHERE DATE(date) LIKE '"+search+"%' ORDER BY date DESC;";
-    history(requete);
+//    history(requete);
 });
 
 document.querySelector("#add_acl").addEventListener('click',function(){
@@ -131,7 +131,7 @@ async function delet(elt,i){
     if(conf){
         var data = {"lineD":i};
         displayData("php/delete.php",data);
-        history("SELECT* FROM history_acl ORDER BY date DESC;");
+//        history("SELECT* FROM history_acl ORDER BY date DESC;");
     }
 }
 
@@ -176,7 +176,7 @@ function modify(elt,position){
             }        
         }    
         var reponse = displayData("php/modify.php",data);
-        history("SELECT* FROM history_acl ORDER BY date DESC;");
+//        history("SELECT* FROM history_acl ORDER BY date DESC;");
     }
 }
 

@@ -9,6 +9,13 @@
   margin: 2vh;
 }
 
+.conLog h1 {
+  text-align: center;
+  color: #fff;
+  font-size: xx-large;
+  margin: 2vh;
+}
+
 .conLog .principale .box {
   margin: auto;
   background-color: #fff;

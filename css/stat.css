@@ -254,12 +254,13 @@ margin-left: -.5vw;
 }
 
 .stat .container-charts .chart-bottom .chart-bottom-right .contains {
+  display: flex;
   width: 28vw;
   height: 33vh;
 }
 
 .stat .container-charts .chart-bottom .chart-bottom-right .contains canvas {
-  margin-left: 4vw;
+  margin-left: 6.5vw;
 }
 
 .stat

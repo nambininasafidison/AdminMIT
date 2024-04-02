@@ -269,19 +269,19 @@
               <div class="swiper-slide acl">
                 <div class="conAcl">
                   <div class="dir">
-                    <a data-slide="1" href="#access-link">
+                    <a data-slide="1" href="#">
                       <div class="containerAcl">
                         <div class="containerImg accessImg"></div>
                         <h1>access</h1>
                       </div>
                     </a>
-                    <a data-slide="2" href="#directive-link">
+                    <a data-slide="2" href="#">
                       <div class="containerAcl">
                         <div class="containerImg directImg"></div>
                         <h1>directive</h1>
                       </div>
                     </a>
-                    <a data-slide="3" href="#status-link">
+                    <a data-slide="3" href="#">
                       <div class="containerAcl">
                         <div class="containerImg statusImg"></div>
                         <h1>status</h1>
@@ -302,11 +302,22 @@
                         <div class="radio">
                           <div class="radio1">
                             <label for="1"> Deny </label>
-                            <input id="1" type="radio" name="access_radio" value="deny" checked/>
+                            <input
+                              id="1"
+                              type="radio"
+                              name="access_radio"
+                              value="deny"
+                              checked
+                            />
                           </div>
                           <div class="radio1">
                             <label for="2"> Allow </label>
-                            <input id="2" type="radio" name="access_radio" value="allow"/>
+                            <input
+                              id="2"
+                              type="radio"
+                              name="access_radio"
+                              value="allow"
+                            />
                           </div>
                         </div>
                         <hr />
@@ -320,7 +331,9 @@
                         <hr />
                         <div class="btns">
                           <button class="cancel">annuler</button>
-                          <button class="ok" id="access_confirm_add">confirmer</button>
+                          <button class="ok" id="access_confirm_add">
+                            confirmer
+                          </button>
                         </div>
                       </div>
                       <div class="square square1"></div>
@@ -347,12 +360,15 @@
                       <div class="tbody" id="access_tableau">
                         <!-- Dans le fichier acl_access.js -->
                       </div>
-
                     </div>
                     <div class="submit">
-                      <button class="access-add-btn" id="access_add">Ajouter</button>
+                      <button class="access-add-btn" id="access_add">
+                        Ajouter
+                      </button>
                       <button id="access_save">Sauvegarder</button>
-                      <button class="access-reset-btn" id="access_restore">Restaurer</button>
+                      <button class="access-reset-btn" id="access_restore">
+                        Restaurer
+                      </button>
                     </div>
                   </div>
                 </section>
@@ -417,7 +433,7 @@
                       <a
                         data-slide="6"
                         class="history-link"
-                        href="#history-link"
+                        href="#"
                         >Voir Historique</a
                       >
                     </div>
@@ -560,7 +576,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide proxy">
                 <div class="conProxy">
-                  <div class="dir">
+                  <div class="dir" id="results">
                     <div class="square square1"></div>
                     <div class="square square2"></div>
                     <div class="square square3"></div>
@@ -571,13 +587,16 @@
               <div class="swiper-slide proxy">
                 <div class="conProxy">
                   <div class="dir">
-                    <form action="http://www.proxy.com/test.php" method="post">
+                      <form
+                        action="http://www.dashboard_admin.com/php/test.php"
+                        method="post"
+                      >
                       <div class="left">
                         <div class="port">
-                          <label for="port">port</label>
-                          <select id="port" name="port">
-                            <option value="3128">3128</option>
-                            <option value="8080">8080</option>
+                          <label for="port">ftp-port</label>
+                          <select id="port" name="listen_ftp_ports">
+                            <option value="no">no</option>
+                            <option value="yes">yes</option>
                           </select>
                         </div>
                         <div class="sens">
@@ -647,44 +666,44 @@
                           />
                         </div>
                       </div>
-                    </form>
 
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
-                  </div>
-                  <div class="containerdir"></div>
-                </div>
-              </div>
-              <div class="swiper-slide proxy proxy1">
-                <div class="conProxy conf">
-                  <div class="dir">
-                    <div class="input">
-                      <label for="host"> Jamais mettre en cache </label>
-                      <input
-                        type="text"
-                        name="url_never"
-                        id=""
-                        placeholder="*.mp3 *.avi"
-                      />
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
                     </div>
-                    <div class="input">
-                      <label for="host"> Télécharger directement </label>
-                      <input
-                        type="text"
-                        name="url_download"
-                        id=""
-                        placeholder="*.exe *.zip"
-                      />
-                    </div>
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
+                    <div class="containerdir"></div>
                   </div>
-                  <div class="containerdir"></div>
                 </div>
-                <input class="submit" type="submit" value="Configure" />
-              </div>
+                <div class="swiper-slide proxy proxy1">
+                  <div class="conProxy conf">
+                    <div class="dir">
+                      <div class="input">
+                        <label for="host"> Jamais mettre en cache </label>
+                        <input
+                          type="text"
+                          name="url_never"
+                          id=""
+                          placeholder="*.mp3 *.avi"
+                        />
+                      </div>
+                      <div class="input">
+                        <label for="host"> Télécharger directement </label>
+                        <input
+                          type="text"
+                          name="url_download"
+                          id=""
+                          placeholder="*.exe *.zip"
+                        />
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                  <input class="submit" type="submit" value="Configure" />
+                </form>
+                </div>
             </div>
             <section class="container-navigate">
               <button class="btn swiper-button-up">
@@ -701,13 +720,13 @@
           <div class="conLogStat">
             <div class="dir">
               <div class="left">
-                <a href="#log" class="log-link">
+                <a data-slide="7" href="#" class="log-link">
                   <div class="log"></div>
                 </a>
-                <h1>Log</h1>
+                <h1>Auth_log</h1>
               </div>
               <div class="right">
-                <a href="#dashboard" class="stat-link">
+                <a data-slide="0" href="#" class="stat-link">
                   <div class="stat"></div>
                 </a>
                 <h1>Statistiques</h1>
@@ -722,7 +741,7 @@
         <!-- History -->
         <div id="history-link" class="swiper-slide log">
           <div class="conLog">
-            <h3>Historique ACL</h3>
+            <h1>Historique ACL</h1>
             <section class="principale">
               <div class="box">
                 <div class="filter">
@@ -857,7 +876,8 @@
     <script src="js/notif.js"></script>
     <script src="js/acl.js"></script>
     <script src="js/authLog.js"></script>
+    <script src="js/back.js"></script>
     <script src="js/acl_access_status.js"></script>
     <script src="js/acl_access_add.js"></script>
-  </body> 
+  </body>
 </html>

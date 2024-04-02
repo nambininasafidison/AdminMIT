@@ -19,7 +19,7 @@ function restore(){
         fclose($f);
     }     
     $mess = "All modification in type ".$_SESSION["type"]." is restored";
-    $test=write_history($mess);
+//    $test=write_history($mess);
 }
 
 ?>

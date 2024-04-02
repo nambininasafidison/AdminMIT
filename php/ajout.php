@@ -69,7 +69,7 @@ function add($data){
             }
         }
         $_SESSION["declaration"][]=$added;
-        write_history("This declaration is added: \" $added \"");
+//        write_history("This declaration is added: \" $added \"");
         put_datas();
         // $reponse = shell_exec("systemctl restart squid");
         // if($reponse==0){
