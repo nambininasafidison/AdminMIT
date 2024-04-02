@@ -130,9 +130,7 @@
             </section>
             <section class="chart-bottom">
               <div class="chart-bottom-left">
-                <div
-                  class="proxy-state container-chart-traffic-content"
-                >
+                <div class="proxy-state container-chart-traffic-content">
                   <div class="selection">
                     <h1>Charge du serveur proxy</h1>
                   </div>
@@ -279,24 +277,24 @@
               <div class="swiper-slide acl">
                 <div class="conAcl">
                   <div class="dir">
-                      <a data-slide="1" href="#access-link">
-                        <div class="containerAcl">
-                          <div class="containerImg accessImg"></div>
-                          <h1>access</h1>
-                        </div>
-                      </a>
-                      <a data-slide="2" href="#directive-link">
-                        <div class="containerAcl">
-                          <div class="containerImg directImg"></div>
-                          <h1>directive</h1>
-                        </div>
-                      </a>
-                      <a data-slide="3" href="#status-link">
-                        <div class="containerAcl">
-                          <div class="containerImg statusImg"></div>
-                          <h1>status</h1>
-                        </div>
-                      </a>
+                    <a data-slide="1" href="#access-link">
+                      <div class="containerAcl">
+                        <div class="containerImg accessImg"></div>
+                        <h1>access</h1>
+                      </div>
+                    </a>
+                    <a data-slide="2" href="#directive-link">
+                      <div class="containerAcl">
+                        <div class="containerImg directImg"></div>
+                        <h1>directive</h1>
+                      </div>
+                    </a>
+                    <a data-slide="3" href="#status-link">
+                      <div class="containerAcl">
+                        <div class="containerImg statusImg"></div>
+                        <h1>status</h1>
+                      </div>
+                    </a>
                     <div class="square square1"></div>
                     <div class="square square2"></div>
                     <div class="square square3"></div>
@@ -385,6 +383,76 @@
                     <div class="containerdir"></div>
                   </div>
                 </section>
+                <section class="modif-access">
+                  <div class="containermodif">
+                    <div class="dir">
+                      <div class="section s1">
+                        <hr />
+                      </div>
+                      <div class="section s2">
+                        <div class="checks">
+                          <input id="t1" type="checkbox" />
+                          <label for="t1">test1</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t2" type="checkbox" />
+                          <label for="t2">test2</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t3" type="checkbox" />
+                          <label for="t3">test3</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t4" type="checkbox" />
+                          <label for="t4">test4</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t5" type="checkbox" />
+                          <label for="t5">test5</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t6" type="checkbox" />
+                          <label for="t6">test6</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t1" type="checkbox" />
+                          <label for="t1">test1</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t2" type="checkbox" />
+                          <label for="t2">test2</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t3" type="checkbox" />
+                          <label for="t3">test3</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t4" type="checkbox" />
+                          <label for="t4">test4</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t5" type="checkbox" />
+                          <label for="t5">test5</label>
+                        </div>
+                        <div class="checks">
+                          <input id="t6" type="checkbox" />
+                          <label for="t6">test6</label>
+                        </div>
+                      </div>
+                      <div class="section s3">
+                        <hr />
+                        <div class="btns">
+                          <button class="cancel">annuler</button>
+                          <button class="ok">modifier</button>
+                        </div>
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </section>
                 <section class="acl-access">
                   <div class="acl-access-box">
                     <div class="logo"></div>
@@ -406,7 +474,7 @@
                           </div>
                           <div class="actions">
                             <div class="logo-actions">
-                              <div><i class="fa fa-edit"></i></div>
+                              <button class="access-modif-btn"><i class="fa fa-edit"></i></button>
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
@@ -418,7 +486,7 @@
                           </div>
                           <div class="actions">
                             <div class="logo-actions">
-                              <div><i class="fa fa-edit"></i></div>
+                              <button class="access-modif-btn"><i class="fa fa-edit"></i></button>
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
@@ -430,7 +498,7 @@
                           </div>
                           <div class="actions">
                             <div class="logo-actions">
-                              <div><i class="fa fa-edit"></i></div>
+                              <button class="access-modif-btn"><i class="fa fa-edit"></i></button>
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
@@ -451,12 +519,12 @@
                   <div class="containeradd">
                     <div class="dir">
                       <div class="section s1">
-                        Name: <input name="name" type="text" required>
+                        Name: <input name="name" type="text" required />
                         <label class="title"></label>
                         <hr />
                       </div>
                       <div id="add-content" class="section s2"></div>
-                      <button class="plus" onClick='addInput(this,0)'>+</button>
+                      <button class="plus" onClick="addInput(this,0)">+</button>
                       <div class="section s3">
                         <hr />
                         <div class="btns">
@@ -857,7 +925,7 @@
           </div>
         </div>
 
-<!-- End of Tsanta's part -->
+        <!-- End of Tsanta's part -->
         <div id="log" class="swiper-slide log">
           <div class="conLog">
             <h3>Analyse des logs</h3>
