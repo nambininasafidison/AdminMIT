@@ -54,6 +54,7 @@ document.querySelector("#add_acl").addEventListener('click',function(){
 
 async function displayData(url,donnee){
     var reponse = await postData(url,donnee);
+   
     if(reponse == null){
         var link = "error.php?message='There is an error!!'";
         window.location.href=link;
@@ -62,7 +63,7 @@ async function displayData(url,donnee){
         var link = "error.php?message="+reponse['Error'];
         window.location.href=link;
     }
-
+    
     var body=document.querySelector("#directive");    
     var titre=document.querySelector("#title");
     var i=0;
