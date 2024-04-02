@@ -6,11 +6,8 @@ const journalFormat = document.querySelector('.input #sensR');
 const hostname = document.querySelector('.input #host');
 
 
-
-
 const selectElement = document.getElementById("sensL");
 const optionsContainer = document.querySelector(".option");
-
 
 
 
@@ -37,12 +34,6 @@ function updateOptions(selectedValue) {
       </div>`;
   
       optionsContainer.innerHTML = htmlContent;
-
-            
-
-
-
-
     } else {
     htmlContent = `
       <div class="input">
@@ -50,17 +41,8 @@ function updateOptions(selectedValue) {
         <input type="number" id="memorySize" name="stck" placeholder="9999 MB" min="0">
       </div>`;
       optionsContainer.innerHTML = htmlContent;
-      
-
-
-
-
-
-
+    
     }
-
-  
-  
   
   optionsContainer.style.display = "block";
 }

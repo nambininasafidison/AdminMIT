@@ -22,6 +22,7 @@
         sscanf($elmt, "%s %d %s %*s %d %*s %s %*s %*s %s", $date, $timePassed, $ip, $size, $url, $type);
         $getType = explode("/", $type);
         $date = to_date($date);
+        $size = $size / 1000;
         // if ($date == $today)
         // {
             $url = transform_url($url);

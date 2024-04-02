@@ -80,7 +80,8 @@
               <div class="chart-top-left">
                 <div class="container-chart-traffic">
                   <div class="selection">
-                    <div class="selections">
+                    <!--
+                        <div class="selections">
                       <select name="test1" id="test1">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -92,6 +93,9 @@
                         <option value="3">3</option>
                       </select>
                     </div>
+
+                    -->
+                    
                     <h1>Analyse du traffic reseau</h1>
                   </div>
                   <div class="contains">
@@ -103,7 +107,7 @@
                       <button class="M1">M1</button>
                       <button class="M2">M2</button>
                     </div>
-                    <canvas id="chart-traffic" height="90"></canvas>
+                    <canvas id="chart-traffic"></canvas>
                   </div>
                 </div>
                 <div class="containerdir"></div>
@@ -134,17 +138,10 @@
                   class="proxy-state container-chart-traffic-content"
                 >
                   <div class="selection">
-                    <h1>Charge du serveur proxy</h1>
+                    <h1>Consommation par site</h1>
                   </div>
                   <div class="contains">
-                    <div class="buttons">
-                      <button class="tous">tous</button>
-                      <button class="L1">L1</button>
-                      <button class="L2">L2</button>
-                      <button class="L3">L3</button>
-                      <button class="M1">M1</button>
-                      <button class="M2">M2</button>
-                    </div>
+                    <canvas id="chart-each-consom"></canvas>  
                   </div>
                 </div>
               </div>
