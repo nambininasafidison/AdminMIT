@@ -71,15 +71,32 @@
 						WHERE timePassed LIKE \"$annee-$mois-%\" AND Levels=\"respo\"");
 	$result = mysqli_fetch_all($rt);
 	$other = 0;
+
 	foreach($result as $elmt)
 	{
 		for($i = 0; $i <= 3; $i++)
 		{
 			$splt = explode("!", $elmt[$i]);
-			$data1[$splt[0]] += $splt[1];
+			$dataTmp[$splt[0]] += $splt[1];
 		}
 		$other += $elmt[4];
 	}
+
+	$tmp32 = $dataTmp;
+	sort($tmp32);
+
+	for ($i=count($tmp32)-1; $i>3; $i--)
+	{
+		foreach($dataTmp as $key => $value)
+		{
+			if ($tmp32[i] == $value)
+			{
+				$data1[$key] = $value;
+				break;
+			}
+		}			
+	}
+
 	$data1['other'] = $other;
 
 			

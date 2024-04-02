@@ -51,9 +51,9 @@ function give_datas($data){
             $line = explode("!",$line);
 //Session Successed
             if(strpos($line[2],"session")!==false){
-                $regex = "%[^)]): session %s for user %s %[^$]";
-                sscanf($line[2],$regex,$inutile,$session,$user,$inutile);
-
+                $regex = "%[^)]): session %s for user %s by %[^$]";
+                sscanf($line[2],$regex,$inutile,$session,$user,$by);
+                if($by == "")$by=" - - ";
 //First and last session                
                 if(($i==0)&&($session=="opened")){
                     $main_session[0]=array("First session opened" => array($line[0],$line[1],$user));
@@ -65,15 +65,28 @@ function give_datas($data){
 
                 $line[2]=$session;
                 $line[]=$user;
+                $line[]=$by;                                
                 $line[]="Success";
                 $result[]=$line;
             }
+
+            else if(strpos($line[2],"ssh2")!==false){
+                $regex = "%s password for %s from %s %[^$]";
+                sscanf($line[2],$regex,$status,$user,$by,$inutile);
+                $line[2]="to open";
+                $line[]=$user;
+                $line=$by;
+                $line[]=$status;
+                $result[]=$line;
+            }
+
 //Session Failed
             else if(strpos($line[2],"FAILED")!==false){
                 $regex = "FAILED SU (to %[^)]) %[^$]";
                 sscanf($line[2],$regex,$user,$inutile);
                 $line[2]=" to open ";
                 $line[]=$user;
+                $line[]=" - - ";
                 $line[]="Failed";
                 $result[]=array($line);            
             }

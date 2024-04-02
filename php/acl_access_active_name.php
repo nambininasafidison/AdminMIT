@@ -20,7 +20,5 @@
     $indice = $data['indice1'];
 
     $rules = ["access" => $access, "name" => $name];
-    // var_dump($rules);
-    // var_dump($indice);
     active_name($indice, $rules);
 ?>

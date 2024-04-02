@@ -33,7 +33,7 @@ setInterval(() => {
 
 function getDataNotifPresence() {
   ajaxGetData("GET", "./data/Notification/NotifJson/notif.php", (tabPresence) => {
-    displayNotifPresence(tabPresence);
+  displayNotifPresence(tabPresence);
   });
 }
 
@@ -59,7 +59,8 @@ function displayNotifAccount(account) {
 }
 
 function displayNotifPresence(presence) {
-  const notifTextPresence =
+  console.log(presence);
+    const notifTextPresence =
     presence.presence.count != 0
       ? `Il y avait ${presence.presence.count} ${
           presence.presence.count == 1

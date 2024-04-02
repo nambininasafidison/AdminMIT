@@ -4,8 +4,10 @@ const inputDns = document.querySelector('.containerInput .input #dns');
 
 inputNetwork.addEventListener('input' , () => {
     const networkValue = inputNetwork.value;
+
     console.log(networkValue);
 });
+
 
 inputCidr.addEventListener('input' , () => {
     const cidrValue = inputCidr.value;
@@ -17,9 +19,6 @@ inputDns.addEventListener('input' , () => {
     const dnsValue = inputDns.value;
     console.log(dnsValue);
 })
-
-
-
 
 
 

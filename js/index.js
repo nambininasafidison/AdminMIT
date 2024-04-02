@@ -35,12 +35,11 @@ const navlinks = document.querySelectorAll(".others-menu-bar ul li a");
 const adminLink = document.querySelectorAll(".admin a");
 const aclLink = document.querySelectorAll(".conAcl a");
 const historyLink = document.querySelectorAll(".acl-directive a");
-const logLink = document.querySelectorAll(".logStat a");
 
 makeLink(navlinks, swiperHorizontal);
 makeLink(adminLink, swiperHorizontal);
 makeLink(historyLink, swiperHorizontal);
-makeLink(logLink, swiperHorizontal);
+// makeLink(aclLink, swiperVertical);
 
 function makeLink(links, swiper) {
   links.forEach((link) => {
@@ -55,18 +54,6 @@ function makeLink(links, swiper) {
     });
   });
 }
-
-aclLink.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const slideIndex = parseInt(link.getAttribute("data-slide"), 10);
-    const currentIndex = swiperVertical.activeIndex;
-    const distance1 = Math.abs(slideIndex - currentIndex);
-    const transitionTime = distance1 * 400;
-
-    swiperVertical.nextEl(slideIndex, transitionTime);
-  });
-});
 
 document.addEventListener("keydown", (e) => {
   switch (e.key) {

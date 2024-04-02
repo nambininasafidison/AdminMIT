@@ -86,141 +86,19 @@ function print_tableau(response, check)
             let td21 = document.createElement('div');
             td21.classList.add('logo-actions');
             let td211 = document.createElement('div');
-
-            let modify1 = document.createElement('button');
-            modify1.classList.add('access-modif-btn');
-            modify1.addEventListener('click', () => {
-                modAccess.style.display = "flex";
-                // console.log(name);
-
-                let all_access;
-                let xhr = new XMLHttpRequest();
-                xhr.open('GET', './php/acl_access_get_all_declaration.php');
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.onload = function(){
-                    if(xhr.readyState === 4  && xhr.status === 200){
-                        all_access = JSON.parse(xhr.responseText);
-
-                        let space = document.getElementById('access_choise_declaration_modif');
-                        // console.log(space);
-                        if(space.innerHTML === '')
-                        {
-                            for(let i of all_access)
-                            {
-                                let one_div = document.createElement('div');
-                                one_div.classList.add('checks');
-                                let check_box = document.createElement('input');
-                                let texte = document.createElement('label');
-                                
-                                check_box.type = 'checkbox';
-                                check_box.name = i;
-                                check_box.id = i;
-                                check_box.value = i;
-                                texte.innerHTML = i;
-                                texte.for = i;
-                                if(name.includes(i))
-                                    check_box.checked = true;
-                                
-
-                                one_div.appendChild(check_box);
-                                one_div.appendChild(texte);
-
-                                space.appendChild(one_div);
-                            }
-                        }
-                    }
-                    else{
-                        let error = xhr.responseText;
-                        console.log('Erreur: '+error);
-                    }
-                };
-                xhr.send();
-
-                let btns1 = document.getElementById('btns1');
-                let button_cancel = document.createElement('button');
-                button_cancel.classList.add('cancel');
-                button_cancel.innerHTML = 'Annuler';
-                button_cancel.addEventListener('click', () => {
-                    modAccess.style.display = "none";
-                });
-                let button_confirm_modif = document.createElement('button');
-                button_confirm_modif.classList.add('ok');
-                button_confirm_modif.innerHTML = 'Modifier';
-
-                btns1.innerHTML = '';
-                btns1.appendChild(button_cancel);
-                btns1.appendChild(button_confirm_modif);
-                // let button_modify = document.getElementById(name);
-                let exist = false;
-                let checked = [];
-
-                let xhr1 = new XMLHttpRequest();
-                xhr1.open('GET', './php/acl_access_get_all_declaration.php');
-                xhr1.setRequestHeader('Content-Type', 'application/json');
-                xhr1.onload = function(){
-                    if(xhr1.readyState === 4  && xhr1.status === 200){
-                        let mod = JSON.parse(xhr1.responseText);
-
-                        button_confirm_modif.addEventListener('click', () => {
-                            modAccess.style.display = "none";
-                            for(let j of mod)
-                            {
-                                let check_box =  document.getElementById(j).checked;
-                                if(check_box)
-                                {
-                                    exist = true;
-                                    checked.push(j);
-                                }
-                            }
-                
-                            if(exist)
-                            {
-                                let json = {
-                                    name: checked,
-                                    indice: i
-                                };
-                    
-                                let xhr2 = new XMLHttpRequest();
-                                xhr2.open('POST', './php/acl_access_modif_name.php', true);
-                                xhr2.setRequestHeader('Content-Type', 'application/json');
-                                xhr2.onload = function(){
-                                    if(xhr2.status === 200){
-                                        // console.log(xhr2.responseText);
-                                    }
-                                };      
-                                xhr2.send(JSON.stringify(json));
-
-                                get_and_print_data_status();
-                                get_and_print_data_status();
-                                get_and_print_data_access();
-                                get_and_print_data_access();
-                            }
-                        });
-                    }
-                    else{
-                        let error = xhr1.responseText;
-                    }
-                };
-                xhr1.send();
-            });
-
-            let modify = document.createElement('i');
+            let modify = document.createElement('div');
             modify.classList.add('fa');
             modify.classList.add('fa-edit');
-            modify1.appendChild(modify);
-
             let td212 = document.createElement('div');
-            let del1 = document.createElement('div');
-            let del = document.createElement('i');
+            let del = document.createElement('div');
             del.classList.add('fa');
             del.classList.add('fa-trash');
             del.addEventListener('click', () => {       // Pour le bouton effacer
                 check[i]=false;
                 print_tableau(response, check);
             });
-            del1.appendChild(del);
-            td211.appendChild(modify1);
-            td212.appendChild(del1);
+            td211.appendChild(modify);
+            td212.appendChild(del);
             td21.appendChild(td211);
             td21.appendChild(td212);
             td2.appendChild(td21);
@@ -244,7 +122,7 @@ function print_tableau(response, check)
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function(){
             if(xhr.status === 200){
-                 console.log(xhr.responseText);
+                console.log(xhr.responseText);
             }
         };
         xhr.send(JSON.stringify(json));
@@ -279,7 +157,8 @@ function get_and_print_data_status()
     xhr.onload = function(){
         if(xhr.readyState === 4  && xhr.status === 200){
             response = JSON.parse(xhr.responseText);
-            console.log('Response: '+response[0]);
+
+            console.log(response);
 
             // if(tableau[0] !== null)
                 print_tableau_status_active(response[0]);       // Affichage des status activées
@@ -319,7 +198,7 @@ function print_tableau_status_active(tableau)
             let data = document.createElement('div');
             data.classList.add('data');
             let nom  = document.createElement('p');
-            nom.innerHTML = name[i];
+                nom.innerHTML = name[i];
             let status = document.createElement('button');
             status.innerHTML = 'Activer';
             status.addEventListener('click', () => {    // Désactivation des states

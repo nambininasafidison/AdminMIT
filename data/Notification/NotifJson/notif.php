@@ -1,4 +1,5 @@
 <?php
+
     $yesterday = date('Y-m-d',time()-24*3600);
     $today = date('Y-m-d');
 
@@ -48,7 +49,7 @@
 
     mysqli_close($connexion);
     $json = json_encode($list);
-    print_r($list);
+    echo $json;
 
 
 ?>
