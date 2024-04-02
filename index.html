@@ -303,71 +303,26 @@
                       <div class="section s1">
                         <div class="radio">
                           <div class="radio1">
-                            <label for="1"> 1</label>
-                            <input id="1" type="radio" />
+                            <label for="1"> Deny </label>
+                            <input id="1" type="radio" name="access_radio" value="deny" checked/>
                           </div>
                           <div class="radio1">
-                            <label for="2"> 2</label>
-                            <input id="2" type="radio" />
+                            <label for="2"> Allow </label>
+                            <input id="2" type="radio" name="access_radio" value="allow"/>
                           </div>
                         </div>
                         <hr />
                       </div>
-                      <div class="section s2">
-                        <div class="checks">
-                          <input id="t1" type="checkbox" />
-                          <label for="t1">test1</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t2" type="checkbox" />
-                          <label for="t2">test2</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t3" type="checkbox" />
-                          <label for="t3">test3</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t4" type="checkbox" />
-                          <label for="t4">test4</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t5" type="checkbox" />
-                          <label for="t5">test5</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t6" type="checkbox" />
-                          <label for="t6">test6</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t1" type="checkbox" />
-                          <label for="t1">test1</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t2" type="checkbox" />
-                          <label for="t2">test2</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t3" type="checkbox" />
-                          <label for="t3">test3</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t4" type="checkbox" />
-                          <label for="t4">test4</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t5" type="checkbox" />
-                          <label for="t5">test5</label>
-                        </div>
-                        <div class="checks">
-                          <input id="t6" type="checkbox" />
-                          <label for="t6">test6</label>
-                        </div>
+
+                      <div class="section s2" id="access_choise_declaration">
+                        <!-- Dans le fichier acl_access_add.js -->
                       </div>
+
                       <div class="section s3">
                         <hr />
                         <div class="btns">
                           <button class="cancel">annuler</button>
-                          <button class="ok">confirmer</button>
+                          <button class="ok" id="access_confirm_add">confirmer</button>
                         </div>
                       </div>
                       <div class="square square1"></div>
@@ -390,48 +345,16 @@
                           <h1>Actions</h1>
                         </div>
                       </div>
-                      <div class="tbody">
-                        <div class="th tr">
-                          <div class="mac-and-ip">
-                            <h1>access1</h1>
-                            <button class="access">Autoriser</button>
-                          </div>
-                          <div class="actions">
-                            <div class="logo-actions">
-                              <div><i class="fa fa-edit"></i></div>
-                              <div><i class="fa fa-trash"></i></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="th tr">
-                          <div class="mac-and-ip">
-                            <h1>access1</h1>
-                            <button class="access">Autoriser</button>
-                          </div>
-                          <div class="actions">
-                            <div class="logo-actions">
-                              <div><i class="fa fa-edit"></i></div>
-                              <div><i class="fa fa-trash"></i></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="th tr">
-                          <div class="mac-and-ip">
-                            <h1>access1</h1>
-                            <button class="access">Autoriser</button>
-                          </div>
-                          <div class="actions">
-                            <div class="logo-actions">
-                              <div><i class="fa fa-edit"></i></div>
-                              <div><i class="fa fa-trash"></i></div>
-                            </div>
-                          </div>
-                        </div>
+
+                      <div class="tbody" id="access_tableau">
+                        <!-- Dans le fichier acl_access.js -->
                       </div>
+
                     </div>
                     <div class="submit">
-                      <button class="access-add-btn">Ajouter</button>
-                      <button class="access-reset-btn">Restaurer</button>
+                      <button class="access-add-btn" id="access_add">Ajouter</button>
+                      <button id="access_save">Sauvegarder</button>
+                      <button class="access-reset-btn" id="access_restore">Restaurer</button>
                     </div>
                   </div>
                 </section>
@@ -524,24 +447,11 @@
                 <section class="acl-status">
                   <div class="acl-status-box">
                     <div class="logo"></div>
-                    <div class="content">
-                      <div class="th">
-                        <h1>Noms</h1>
-                        <h1>Statut</h1>
-                      </div>
-                      <div class="data">
-                        <p>Noms</p>
-                        <button>Active</button>
-                      </div>
-                      <div class="data">
-                        <p>Noms</p>
-                        <button>Active</button>
-                      </div>
-                      <div class="data">
-                        <p>Noms</p>
-                        <button>Active</button>
-                      </div>
+
+                    <div class="content" id="status_tableau">
+                      <!-- Dans le fichier acl_access_status.js-->
                     </div>
+
                     <span class="red-square"></span>
                   </div>
                 </section>
@@ -931,5 +841,7 @@
     <script src="js/notif.js"></script>
     <script src="js/acl.js"></script>
     <!-- <script src="js/back.js"></script>-->
+    <script src="js/acl_access_status.js"></script>
+    <script src="js/acl_access_add.js"></script>
   </body> 
 </html>
