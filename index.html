@@ -34,7 +34,7 @@
           <li><a data-slide="4" href="#proxy">Proxy</a></li>
           <li><a data-slide="5" href="#logStat">Log and stat</a></li>
           <li><a data-slide="6" href="#log">Historiques acl</a></li>
-          <li><a data-slide="7" href="#log">Log</a></li>
+          <li><a data-slide="7" href="#log">Auth.log</a></li>
         </ul>
       </section>
       <section class="container-menu">
@@ -466,7 +466,9 @@
                           </div>
                           <div class="actions">
                             <div class="logo-actions">
-                              <button class="access-modif-btn"><i class="fa fa-edit"></i></button>
+                              <button class="access-modif-btn">
+                                <i class="fa fa-edit"></i>
+                              </button>
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
@@ -478,7 +480,9 @@
                           </div>
                           <div class="actions">
                             <div class="logo-actions">
-                              <button class="access-modif-btn"><i class="fa fa-edit"></i></button>
+                              <button class="access-modif-btn">
+                                <i class="fa fa-edit"></i>
+                              </button>
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
@@ -490,7 +494,9 @@
                           </div>
                           <div class="actions">
                             <div class="logo-actions">
-                              <button class="access-modif-btn"><i class="fa fa-edit"></i></button>
+                              <button class="access-modif-btn">
+                                <i class="fa fa-edit"></i>
+                              </button>
                               <div><i class="fa fa-trash"></i></div>
                             </div>
                           </div>
@@ -561,7 +567,10 @@
                           <option>Authentification</option>
                         </select>
                       </div>
-                      <a class="history-link" href="#history-link"
+                      <a
+                        data-slide="6"
+                        class="history-link"
+                        href="#history-link"
                         >Voir Historique</a
                       >
                     </div>
@@ -918,7 +927,7 @@
         </div>
 
         <!-- End of Tsanta's part -->
-        <div id="log" class="swiper-slide log">
+        <!-- <div id="log" class="swiper-slide log">
           <div class="conLog">
             <h3>Analyse des logs</h3>
             <section class="principale">
@@ -984,6 +993,21 @@
               </div>
             </section>
           </div>
+        </div> -->
+        <div id="authlog-link" class="swiper-slide log">
+          <div class="conLog conAuthLog">
+            <h3>STATISTIQUE DE AUTH.LOG</h3>
+            <section class="principale">
+              <div class="filter">
+                <i class="fa fa-search"></i
+                ><input id="f_authlog" type="text" /> <i class="fa fa-date"></i
+                ><input id="authlog_d" type="date" />
+                <div id="first_session">asdfgh</div>
+                <div id="last_session">sdfghj</div>
+              </div>
+              <div id="authlog" class="table"></div>
+            </section>
+          </div>
         </div>
       </div>
       <!-- <div class="swiper-button-prev"></div>
@@ -998,6 +1022,6 @@
     <script src="js/dhcp.js"></script>
     <script src="js/notif.js"></script>
     <script src="js/acl.js"></script>
-    <!-- <script src="js/back.js"></script>-->
-  </body> 
+    <script src="js/authLog.js"></script>
+  </body>
 </html>

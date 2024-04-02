@@ -1,10 +1,13 @@
+.conAuthLog {
+  background-color: #fff;
+}
+
 .conLog h3 {
   text-align: center;
-  color: #fff;
+  color: #000;
   font-size: xx-large;
   margin: 2vh;
 }
-
 
 .conLog .principale .box {
   margin: auto;
@@ -39,7 +42,8 @@
   background-color: #fff;
 }
 
-.conLog .principale .box .table {
+.conLog .principale .box .table,
+.conLog .principale .table {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -74,71 +78,112 @@
   height: 5vh;
   font-size: 0.8vw;
 }
-.conLog .principale .box .table .th0 {
+
+.conLog .principale .table .th {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  position: relative;
+  height: 8vh;
+  font-size: 1vw;
+}
+
+.conLog .principale .box .table .th0,
+.conLog .principale .table .th0 {
   left: -9vw;
   background-color: #f00;
 }
-.conLog .principale .box .table .th1 {
+.conLog .principale .box .table .th1,
+.conLog .principale .table .th1 {
   left: 17vw;
   background-color: #f00;
 }
-.conLog .principale .box .table .th3 {
+.conLog .principale .box .table .th3,
+.conLog .principale .table .th3 {
   background-color: #000;
 }
-.conLog .principale .box .table .th3 {
+.conLog .principale .box .table .th3,
+.conLog .principale .table .th3 {
   padding: 0;
 }
-.conLog .principale .box .table .th0 .contenu {
+.conLog .principale .box .table .th0 .contenu,
+.conLog .principale .table .th0 .contenu {
   margin-left: 18vw;
 }
-.conLog .principale .box .table .th1 .contenu {
+.conLog .principale .box .table .th1 .contenu,
+.conLog .principale .table .th1 .contenu {
   margin-left: -8vw;
 }
 
-.conLog .principale .box .table .tr:last-child {
+.conLog .principale .box .table .tr:last-child,
+.conLog .principale .table .tr:last-child {
   margin-bottom: 150px;
 }
-.conLog .principale .box .table .th .contenu {
+.conLog .principale .box .table .th .contenu,
+.conLog .principale .table .th .contenu {
   display: flex;
   width: 80vw;
   padding: 10px 30px;
   background-color: #000;
   border-radius: inherit;
 }
-.conLog .principale .box .table .tr .contenu {
+.conLog .principale .box .table .tr .contenu,
+.conLog .principale .table .tr .contenu {
   background-color: #f00;
 }
-.conLog .principale .box .table .th .contenu h1 {
-  color: #fff;
-  width: 10vw;
-  margin: 0.2vh 1vw;
-}
 
-
-#history .tr , #history .th{
+#history .tr,
+#history .th {
   height: auto;
   max-height: 20vh;
   background-color: #f00;
-} 
+}
+#authlog .tr,
+#authlog .th {
+  height: 15vh;
+}
 
-#history .tr .contenu h1 , #history .th .contenu h1 {
-    color: #fff;
-    width: auto;
-    max-width: 60%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin: 0.2vh 1vw;
+#authlog .th .contenu h1,
+#authlog .tr .contenu h1 {
+  font-weight: normal;
+  color: #fff;
+  width: auto;
+  max-width: 60%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0.2vh 1vw;
+}
+
+#history .tr .contenu h1,
+#history .th .contenu h1 {
+  color: #fff;
+  width: auto;
+  max-width: 60%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0.2vh 1vw;
 }
 
 .filter {
   position: relative;
   right: 0;
   margin-top: 10vh;
-  margin-left: 88%;
+  margin-left: 60%;
   width: 100%;
 }
 
-#filter_History, #history_date {
+#authlog-link .filter {
+  margin: 2vw;
+  margin-top: 4vw;
+}
+
+#filter_History,
+#history_date,
+#f_authlog,
+#authlog_d,
+#first_session,
+#last_session {
   background: none;
   height: 5vh;
   width: 15vw;
@@ -148,4 +193,22 @@
   margin-left: 2vw;
 }
 
+#f_authlog,
+#authlog_d {
+  border: 1px solid #000;
+  color: #000;
+}
 
+#authlog .th .contenu h1 {
+  width: 15%;
+}
+
+#first_session,
+#last_session {
+  position: relative;
+  background-color: #fff;
+  padding: 1vh;
+  margin: 2vh;
+  width: 50vw;
+  height: auto;
+}
