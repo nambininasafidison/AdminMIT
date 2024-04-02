@@ -59,8 +59,8 @@
     
     $data[] = get_active();
     $data[] = get_disable(); 
-    $d = json_encode($data);
 
+    $d = json_encode($data);
     header('Content-Type: application/json');
     echo $d;
 ?>

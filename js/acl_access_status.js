@@ -136,73 +136,72 @@ function print_tableau(response, check)
                 };
                 xhr.send();
 
-            let btns1 = document.getElementById('btns1');
-            let button_cancel = document.createElement('button');
-            button_cancel.classList.add('cancel');
-            button_cancel.innerHTML = 'Annuler';
-            button_cancel.addEventListener('click', () => {
-                modAccess.style.display = "none";
-            });
-            let button_confirm_modif = document.createElement('button');
-            button_confirm_modif.classList.add('ok');
-            button_confirm_modif.innerHTML = 'Modifier';
+                let btns1 = document.getElementById('btns1');
+                let button_cancel = document.createElement('button');
+                button_cancel.classList.add('cancel');
+                button_cancel.innerHTML = 'Annuler';
+                button_cancel.addEventListener('click', () => {
+                    modAccess.style.display = "none";
+                });
+                let button_confirm_modif = document.createElement('button');
+                button_confirm_modif.classList.add('ok');
+                button_confirm_modif.innerHTML = 'Modifier';
 
-            btns1.innerHTML = '';
-            btns1.appendChild(button_cancel);
-            btns1.appendChild(button_confirm_modif);
-            // let button_modify = document.getElementById(name);
-            let exist = false;
-            let checked = [];
+                btns1.innerHTML = '';
+                btns1.appendChild(button_cancel);
+                btns1.appendChild(button_confirm_modif);
+                // let button_modify = document.getElementById(name);
+                let exist = false;
+                let checked = [];
 
-            let xhr1 = new XMLHttpRequest();
-            xhr1.open('GET', './php/acl_access_get_all_declaration.php');
-            xhr1.setRequestHeader('Content-Type', 'application/json');
-            xhr1.onload = function(){
-                if(xhr1.readyState === 4  && xhr1.status === 200){
-                    let mod = JSON.parse(xhr1.responseText);
+                let xhr1 = new XMLHttpRequest();
+                xhr1.open('GET', './php/acl_access_get_all_declaration.php');
+                xhr1.setRequestHeader('Content-Type', 'application/json');
+                xhr1.onload = function(){
+                    if(xhr1.readyState === 4  && xhr1.status === 200){
+                        let mod = JSON.parse(xhr1.responseText);
 
-                    button_confirm_modif.addEventListener('click', () => {
-                        modAccess.style.display = "none";
-                        for(let j of mod)
-                        {
-                            let check_box =  document.getElementById(j).checked;
-                            if(check_box)
+                        button_confirm_modif.addEventListener('click', () => {
+                            modAccess.style.display = "none";
+                            for(let j of mod)
                             {
-                                exist = true;
-                                checked.push(j);
-                            }
-                        }
-            
-                        if(exist)
-                        {
-                            let json = {
-                                name: checked,
-                                indice: i
-                            };
-                
-                            let xhr2 = new XMLHttpRequest();
-                            xhr2.open('POST', './php/acl_access_modif_name.php', true);
-                            xhr2.setRequestHeader('Content-Type', 'application/json');
-                            xhr2.onload = function(){
-                                if(xhr2.status === 200){
-                                    // console.log(xhr2.responseText);
+                                let check_box =  document.getElementById(j).checked;
+                                if(check_box)
+                                {
+                                    exist = true;
+                                    checked.push(j);
                                 }
-                            };      
-                            xhr2.send(JSON.stringify(json));
+                            }
+                
+                            if(exist)
+                            {
+                                let json = {
+                                    name: checked,
+                                    indice: i
+                                };
+                    
+                                let xhr2 = new XMLHttpRequest();
+                                xhr2.open('POST', './php/acl_access_modif_name.php', true);
+                                xhr2.setRequestHeader('Content-Type', 'application/json');
+                                xhr2.onload = function(){
+                                    if(xhr2.status === 200){
+                                        // console.log(xhr2.responseText);
+                                    }
+                                };      
+                                xhr2.send(JSON.stringify(json));
 
-                            get_and_print_data_status();
-                            get_and_print_data_status();
-                            get_and_print_data_access();
-                            get_and_print_data_access();
-                        }
-                    });
-                }
-                else{
-                    let error = xhr1.responseText;
-                }
-            };
-            xhr1.send();
-
+                                get_and_print_data_status();
+                                get_and_print_data_status();
+                                get_and_print_data_access();
+                                get_and_print_data_access();
+                            }
+                        });
+                    }
+                    else{
+                        let error = xhr1.responseText;
+                    }
+                };
+                xhr1.send();
             });
 
             let modify = document.createElement('i');
@@ -245,7 +244,7 @@ function print_tableau(response, check)
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function(){
             if(xhr.status === 200){
-                // console.log(xhr.responseText);
+                 console.log(xhr.responseText);
             }
         };
         xhr.send(JSON.stringify(json));
@@ -280,8 +279,7 @@ function get_and_print_data_status()
     xhr.onload = function(){
         if(xhr.readyState === 4  && xhr.status === 200){
             response = JSON.parse(xhr.responseText);
-
-            //console.log(response);
+            console.log('Response: '+response[0]);
 
             // if(tableau[0] !== null)
                 print_tableau_status_active(response[0]);       // Affichage des status activées
@@ -321,7 +319,7 @@ function print_tableau_status_active(tableau)
             let data = document.createElement('div');
             data.classList.add('data');
             let nom  = document.createElement('p');
-                nom.innerHTML = name[i];
+            nom.innerHTML = name[i];
             let status = document.createElement('button');
             status.innerHTML = 'Activer';
             status.addEventListener('click', () => {    // Désactivation des states
@@ -336,7 +334,7 @@ function print_tableau_status_active(tableau)
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.onload = function(){
                     if(xhr.status === 200){
-                        // console.log(xhr.responseText);
+                        console.log(xhr.responseText);
                     }
                 };      
                 xhr.send(JSON.stringify(json));
@@ -380,7 +378,7 @@ function print_tableau_status_disable(tableau)
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function(){
                 if(xhr.status === 200){
-                    // console.log(xhr.responseText);
+                    console.log(xhr.responseText);
                 }
             };
             xhr.send(JSON.stringify(json));
