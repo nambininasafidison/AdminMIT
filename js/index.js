@@ -34,9 +34,11 @@ var swiperVertical = new Swiper(".swiper-container-vertical", {
 const navlinks = document.querySelectorAll(".others-menu-bar ul li a");
 const adminLink = document.querySelectorAll(".admin a");
 const aclLink = document.querySelectorAll(".conAcl a");
+const historyLink = document.querySelectorAll(".acl-directive a");
 
 makeLink(navlinks, swiperHorizontal);
 makeLink(adminLink, swiperHorizontal);
+makeLink(historyLink, swiperHorizontal);
 // makeLink(aclLink, swiperVertical);
 
 function makeLink(links, swiper) {
