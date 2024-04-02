@@ -52,6 +52,9 @@ function fetchDataChartTraffic(level){
             data: {
               labels: jour,
               datasets: [{
+                label:'Consommation total chaque jour en mo',
+                backgroundColor:'#ff0000',
+                borderColor:'#ff0000',
                 data: dataJour,
               }]
             },
@@ -171,7 +174,12 @@ function fetchDataSitePop(level){
               scales: {
                 y: {
                   beginAtZero: true
-                }
+                },
+                x: [{
+                  ticks: {
+                      display: false // Masquer les étiquettes de l'axe x par défaut
+                  }
+                }]
               },
               borderRadius: 10,
               barPercentage: 0.7
