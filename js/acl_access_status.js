@@ -86,19 +86,26 @@ function print_tableau(response, check)
             let td21 = document.createElement('div');
             td21.classList.add('logo-actions');
             let td211 = document.createElement('div');
-            let modify = document.createElement('div');
+
+            let modify1 = document.createElement('button');
+            modify1.classList.add('access-modif-btn');
+            let modify = document.createElement('i');
             modify.classList.add('fa');
             modify.classList.add('fa-edit');
+            modify1.appendChild(modify);
+
             let td212 = document.createElement('div');
-            let del = document.createElement('div');
+            let del1 = document.createElement('div');
+            let del = document.createElement('i');
             del.classList.add('fa');
             del.classList.add('fa-trash');
             del.addEventListener('click', () => {       // Pour le bouton effacer
                 check[i]=false;
                 print_tableau(response, check);
             });
-            td211.appendChild(modify);
-            td212.appendChild(del);
+            del1.appendChild(del);
+            td211.appendChild(modify1);
+            td212.appendChild(del1);
             td21.appendChild(td211);
             td21.appendChild(td212);
             td2.appendChild(td21);
