@@ -41,7 +41,7 @@ function suppr_line($dt){
                 fwrite($f,$d."\n");
             }
         }
-        write_history("This declaration is supprimed: \"{$GLOBAL['line']}\"(with all access which depend on it).");
+//        write_history("This declaration is supprimed: \"{$GLOBAL['line']}\"(with all access which depend on it).");
     }else echo json_encode(array("message"=>"Impossible d'ouvrir le fichier."));
     fclose($f);
 }

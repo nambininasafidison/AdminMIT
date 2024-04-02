@@ -11,6 +11,10 @@
   margin-top: -10vh;
 }
 
+.conDhcp h1{
+  width: 20vw;
+}
+
 .conDhcp .containerdir {
   width: 60vw;
   height: 75vh;

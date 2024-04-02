@@ -61,7 +61,7 @@ function modify($data){
             //     echo json_encode(["Error" => $errorMessage]);
             //     exit(0);
             // }
-            write_history("This declaration \"$toModify\" is modified to \"$modified\"");
+//            write_history("This declaration \"$toModify\" is modified to \"$modified\"");
             put_datas();
         }
         else {echo json_encode(["Error" => "Tous les noms doivent etre unique"]);exit(0);}    

@@ -49,7 +49,7 @@ async function authLog(requetes) {
   while (body.firstChild) {
     body.removeChild(body.firstChild);
   }
-  console.log(reponse);
+  // console.log(reponse);
   // if(reponse == null){
   //     var link = "error.php?message='There is an error!!'";
   //     window.location.href=link;
