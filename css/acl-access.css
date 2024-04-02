@@ -141,9 +141,12 @@
   justify-content: space-evenly;
 }
 
-.acl-access .acl-access-box .table .tr .actions .logo-actions .edit {
-    
+.acl-access .acl-access-box .table .tr .actions .logo-actions button {
   cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2vw;
+  color: #fff;
 }
 
 .acl-access .acl-access-box .table .tr .actions .logo-actions .supp {
@@ -317,6 +320,135 @@
 }
 
 .add-access .btns .ok{
+  background-color: #f00;
+  color: #fff;
+}
+
+.modif-access {
+  position: absolute;
+  width: 94vw;
+  height: 79vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: #190306;
+}
+
+.modif-access .containermodif {
+  position: relative;
+}
+
+.modif-access .containerdir {
+  width: 55vw;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 20% 0, 25% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.modif-access .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.modif-access .square1 {
+  right: -6vw;
+  top: 30vh;
+}
+
+.modif-access .square2 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.modif-access .square3 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.modif-access .dir {
+  width: 55vw;
+  height: 59vh;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.modif-access .section {
+  width: 43vw;
+  height: 8vh;
+}
+
+.modif-access .section hr {
+  background-color: #000;
+  border: none;
+  height: 1px;
+  width: 43vw;
+  margin: 2vh 0;
+}
+
+.modif-access .s2 {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.modif-access .s2 .checks{
+  display: flex;
+  font-size: 1vw;
+}
+
+.modif-access .s2 .checks input{
+  width: .7vw;
+  height: .7vw;
+  margin: .8vh .5vw 0 0;
+}
+
+.modif-access .s3 {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modif-access button {
+  border: none;
+  border-radius: 2vw;
+  padding: 1vh;
+}
+
+.modif-access .btns{
+  display: flex;
+  justify-content: space-between;
+  width: 43vw;
+}
+
+.modif-access .btns button{
+  width: 6vw;
+  font-size: .8vw;
+  background-color: #999;
+}
+
+.modif-access .btns .ok{
   background-color: #f00;
   color: #fff;
 }
