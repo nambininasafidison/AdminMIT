@@ -1,0 +1,60 @@
+Apr  1 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  1 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  1 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  1 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  1 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  2 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  2 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  2 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  2 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  2 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  3 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  3 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  3 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  3 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  3 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  4 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  4 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  4 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  4 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  4 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  5 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  5 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  5 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  5 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  5 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  6 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  6 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  6 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  6 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  6 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  7 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  7 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  7 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  7 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  7 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  8 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  8 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  8 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  8 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  8 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  9 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  9 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  9 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  9 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  9 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  10 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  10 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  10 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  10 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  10 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  11 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  11 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  11 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  11 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  11 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root 
+Apr  12 22:49:41 ! 127.0.0.1 !  pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000) 
+Apr  12 22:49:41 ! 192.168.1.25 !  (to root) root on pts/5 
+Apr  12 22:49:41 ! 192.168.1.30 !  pam_unix(su:session): session opened for user root(uid=0) by tsanta(uid=0) 
+Apr  12 22:55:01 ! 192.168.1.24 !  pam_unix(cron:session): session opened for user root(uid=0) by (uid=0) 
+Apr  12 22:55:01 ! 192.168.1.15 !  pam_unix(cron:session): session closed for user root
