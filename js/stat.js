@@ -1,29 +1,103 @@
+const level = ['Tous' , 'L1' , 'L2' , 'L3' , 'M1' , 'M2'];
+
 const chartTraffic = document.getElementById('chart-traffic');
+const chartEachConsom =  document.getElementById('chart-each-consom');
 
+const btnChartTraffic = document.querySelectorAll('.chart-top-left .container-chart-traffic .buttons button');
 
-new Chart(chartTraffic, {
-    type: 'line',
-    data: {
-      labels: ['1', '2', '3', '4', '5', '6' , '1', '2', '3', '4', '5', '6'],
-      datasets: [{
-        data: [12, 19, 3, 5],
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          stepSize:100
-        },
-        x: {
-          grid:{
-            display:false
-          }
-        }
-      },
-      borderRadius:10
-    }
+let contentChartTraffic;
+let contentEachConsom;
+
+let currentLevelChartTraffic = 'Tous';
+
+fetchDataChartTraffic(currentLevelChartTraffic);
+
+Array.from(btnChartTraffic).forEach((btn , index) => {  
+  if(index==0)btn.style.backgroundColor = '#ff0000';
 });
+
+Array.from(btnChartTraffic).forEach((btn , index) => {  
+  btn.addEventListener('click' , () => {
+    Array.from(btnChartTraffic).forEach((btn) => {  
+      btn.style.backgroundColor = 'transparent';
+    });
+    btn.style.backgroundColor = '#ff0000';
+    currentLevelChartTraffic = level[index];
+    fetchDataChartTraffic(currentLevelChartTraffic);
+    console.log(currentLevelChartTraffic);
+  })
+})
+
+function fetchDataChartTraffic(level){
+  if(level == 'Tous') level = 'Generale';
+  let jour = [];
+  let dataJour = [];
+  let siteConsom = [];
+  let siteDataConsom = [];
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', `./data/Dash/${level}/consommation.php`, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let [tabChartTraffic] = JSON.parse(xhr.responseText);
+        console.log(tabChartTraffic);
+        jour = tabChartTraffic[1].labels;
+        dataJour = tabChartTraffic[1].data;
+        siteConsom = Object.keys(tabChartTraffic[2]);
+        siteDataConsom = Object.values(tabChartTraffic[2]);
+        if (!contentChartTraffic && !contentEachConsom) {
+          contentChartTraffic = new Chart(chartTraffic, {
+            type: 'line',
+            data: {
+              labels: jour,
+              datasets: [{
+                label:'Consommation total chaque jour en mo',
+                backgroundColor:'#ff0000',
+                borderColor:'#ff0000',
+                data: dataJour,
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  stepSize:100
+                },
+                x: {
+                  grid:{
+                    display:false
+                  }
+                }
+              },
+              borderRadius:10
+            }
+        });          
+        contentEachConsom = new Chart(chartEachConsom , {
+          type: 'polarArea',
+          data: {
+            labels: siteConsom,
+            datasets: [{
+              data: siteDataConsom,
+            }]
+          } 
+        });
+      } else {
+          contentChartTraffic.data.labels = jour;
+          contentChartTraffic.data.datasets[0].data = dataJour;
+          contentChartTraffic.update();
+          
+          contentEachConsom.data.labels = siteConsom;
+          contentEachConsom.data.datasets[0].data = siteDataConsom;
+          contentEachConsom.update();
+        }
+      } else {
+        console.error('Erreur lors de la récupération des données:', xhr.status);
+      }
+    }
+  };
+  xhr.send();
+}
 
 
 //chart-proxyCharge
@@ -43,7 +117,6 @@ new Chart(chartProxyCharge , {
 
 
 
-const level = ['Tous' , 'L1' , 'L2' , 'L3' , 'M1' , 'M2'];
 
 
 //CHART FOR POPULAR SITE
@@ -84,8 +157,8 @@ function fetchDataSitePop(level){
       if (xhr.status === 200) {
         let tabSitePop = JSON.parse(xhr.responseText);
         console.log(tabSitePop);
-        labelSitePop = Array.keys(tabSitePop);
-        dataSitePop = Array.values(tabSitePop);
+        labelSitePop = Object.keys(tabSitePop);
+        dataSitePop = Object.values(tabSitePop);
         if (!sitePopChart) {
           sitePopChart = new Chart(chartSitePop, {
             type: 'bar',
@@ -101,7 +174,12 @@ function fetchDataSitePop(level){
               scales: {
                 y: {
                   beginAtZero: true
-                }
+                },
+                x: [{
+                  ticks: {
+                      display: false // Masquer les étiquettes de l'axe x par défaut
+                  }
+                }]
               },
               borderRadius: 10,
               barPercentage: 0.7

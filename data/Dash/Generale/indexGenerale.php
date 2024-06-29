@@ -20,5 +20,5 @@
     $jsonL3 = json_encode($site_number);
 
     echo $jsonL3;
-    mysqli_close();
+    
 ?>

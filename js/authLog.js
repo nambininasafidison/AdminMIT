@@ -81,6 +81,10 @@ async function authLog(requetes) {
   b.appendChild(h3);
 
   var h3 = document.createElement("h1");
+  h3.innerHTML = "By";
+  b.appendChild(h3);
+
+  var h3 = document.createElement("h1");
   h3.innerHTML = "Status";
   b.appendChild(h3);
 
@@ -112,7 +116,7 @@ async function authLog(requetes) {
     }
 
     var a = document.createElement("a");
-    a.href = "detail.php?ip=" + rep[1];
+    a.href = "../modify/database.php?ip=" + rep[1];
     a.innerHTML = "Qui?";
     div1.appendChild(a);
 

@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
-    <link rel="stylesheet" href="package/swiper-bundle.css" />
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="css/navigate.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/notification.css" />
-    <link rel="stylesheet" href="css/log-stat.css" />
-    <link rel="stylesheet" href="css/proxy.css" />
-    <link rel="stylesheet" href="css/stat.css" />
-    <link rel="stylesheet" href="css/acl.css" />
-    <link rel="stylesheet" href="css/acl-access.css" />
-    <link rel="stylesheet" href="css/acl-directive.css" />
-    <link rel="stylesheet" href="css/acl-status.css" />
-    <link rel="stylesheet" href="css/log.css" />
-    <link rel="stylesheet" href="css/dhcp.css" />
+    <title>MIT | Admin</title>
+    <link rel="stylesheet" href="./package/swiper-bundle.css" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/navigate.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/background.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/notification.css" />
+    <link rel="stylesheet" href="./css/log-stat.css" />
+    <link rel="stylesheet" href="./css/proxy.css" />
+    <link rel="stylesheet" href="./css/stat.css" />
+    <link rel="stylesheet" href="./css/acl.css" />
+    <link rel="stylesheet" href="./css/acl-access.css" />
+    <link rel="stylesheet" href="./css/acl-directive.css" />
+    <link rel="stylesheet" href="./css/acl-status.css" />
+    <link rel="stylesheet" href="./css/log.css" />
+    <link rel="stylesheet" href="./css/dhcp.css" />
   </head>
   <body>
     <header>
@@ -80,7 +80,7 @@
               <div class="chart-top-left">
                 <div class="container-chart-traffic">
                   <div class="selection">
-                    <div class="selections">
+                    <!-- <div class="selections">
                       <select name="test1" id="test1">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -92,6 +92,7 @@
                         <option value="3">3</option>
                       </select>
                     </div>
+                     -->
                     <h1>Analyse du traffic reseau</h1>
                   </div>
                   <div class="contains">
@@ -103,7 +104,7 @@
                       <button class="M1">M1</button>
                       <button class="M2">M2</button>
                     </div>
-                    <canvas id="chart-traffic" height="90"></canvas>
+                    <canvas id="chart-traffic"></canvas>
                   </div>
                 </div>
                 <div class="containerdir"></div>
@@ -132,24 +133,15 @@
               <div class="chart-bottom-left">
                 <div class="proxy-state container-chart-traffic-content">
                   <div class="selection">
-                    <h1>Charge du serveur proxy</h1>
+                    <h1>Consommation par site</h1>
                   </div>
                   <div class="contains">
-                    <div class="buttons">
-                      <button class="tous">tous</button>
-                      <button class="L1">L1</button>
-                      <button class="L2">L2</button>
-                      <button class="L3">L3</button>
-                      <button class="M1">M1</button>
-                      <button class="M2">M2</button>
-                    </div>
+                    <canvas id="chart-each-consom"></canvas>
                   </div>
                 </div>
               </div>
               <div class="chart-bottom-center">
-                <div
-                  class="container-chart-sitePop container-chart-traffic-content"
-                >
+                <div class="container-chart-sitePop container-chart-traffic-content">
                   <div class="selection">
                     <h1>Sites Web les plus visites</h1>
                   </div>
@@ -167,9 +159,7 @@
                 </div>
               </div>
               <div class="chart-bottom-right">
-                <div
-                  class="container-chart-proxyCharge container-chart-traffic-content"
-                >
+                <div class="container-chart-proxyCharge container-chart-traffic-content">
                   <div class="selection">
                     <h1>Charge du serveur proxy</h1>
                   </div>
@@ -269,19 +259,19 @@
               <div class="swiper-slide acl">
                 <div class="conAcl">
                   <div class="dir">
-                    <a data-slide="1" href="#">
+                    <a data-slide="1" href="#access-link">
                       <div class="containerAcl">
                         <div class="containerImg accessImg"></div>
                         <h1>access</h1>
                       </div>
                     </a>
-                    <a data-slide="2" href="#">
+                    <a data-slide="2" href="#directive-link">
                       <div class="containerAcl">
                         <div class="containerImg directImg"></div>
                         <h1>directive</h1>
                       </div>
                     </a>
-                    <a data-slide="3" href="#">
+                    <a data-slide="3" href="#status-link">
                       <div class="containerAcl">
                         <div class="containerImg statusImg"></div>
                         <h1>status</h1>
@@ -433,7 +423,7 @@
                       <a
                         data-slide="6"
                         class="history-link"
-                        href="#"
+                        href="#history-link"
                         >Voir Historique</a
                       >
                     </div>
@@ -720,13 +710,13 @@
           <div class="conLogStat">
             <div class="dir">
               <div class="left">
-                <a data-slide="7" href="#" class="log-link">
+                <a href="#log" class="log-link">
                   <div class="log"></div>
                 </a>
-                <h1>Auth_log</h1>
+                <h1>Log</h1>
               </div>
               <div class="right">
-                <a data-slide="0" href="#" class="stat-link">
+                <a href="#dashboard" class="stat-link">
                   <div class="stat"></div>
                 </a>
                 <h1>Statistiques</h1>
@@ -741,7 +731,7 @@
         <!-- History -->
         <div id="history-link" class="swiper-slide log">
           <div class="conLog">
-            <h1>Historique ACL</h1>
+            <h3>Historique ACL</h3>
             <section class="principale">
               <div class="box">
                 <div class="filter">
@@ -867,17 +857,17 @@
       <div class="swiper-button-next"></div> -->
     </section>
 
-    <script src="package/swiper-bundle.js"></script>
-    <script src="js/chart.js-4.4.2/package/dist/chart.umd.js"></script>
-    <script src="js/stat.js"></script>
-    <script src="js/proxy.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/dhcp.js"></script>
-    <script src="js/notif.js"></script>
-    <script src="js/acl.js"></script>
-    <script src="js/authLog.js"></script>
-    <script src="js/back.js"></script>
-    <script src="js/acl_access_status.js"></script>
-    <script src="js/acl_access_add.js"></script>
+    <script src="./package/swiper-bundle.js"></script>
+    <script src="./js/chart.js-4.4.2/package/dist/chart.umd.js"></script>
+    <script src="./js/stat.js"></script>
+    <script src="./js/proxy.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/dhcp.js"></script>
+    <script src="./js/notif.js"></script>
+    <script src="./js/acl.js"></script>
+    <script src="./js/authLog.js"></script>
+    <script src="./js/back.js"></script>
+    <script src="./js/acl_access_status.js"></script>
+    <script src="./js/acl_access_add.js"></script>
   </body>
 </html>

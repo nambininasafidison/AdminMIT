@@ -56,7 +56,7 @@ xhr.onload = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     response = JSON.parse(xhr.responseText);
 
-    // console.log(response + "ICI");
+    console.log(response + "ICI");
 
     if (response !== null) {
       const resultsDiv = document.getElementById("results");

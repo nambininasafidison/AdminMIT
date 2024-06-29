@@ -23,7 +23,7 @@ bell.addEventListener("click", () => {
 getDataNotifPresence();
 
 //get Notif count if it exist
-getDataNotifAccount();
+//getDataNotifAccount();
 
 setInterval(() => {
   allNotif.innerHTML = "";
@@ -32,8 +32,8 @@ setInterval(() => {
 }, 36000);
 
 function getDataNotifPresence() {
-  ajaxGetData("GET", "./data/backend_test/presence.php", (tabPresence) => {
-    displayNotifPresence(tabPresence[0]);
+  ajaxGetData("GET", "./data/Notification/NotifJson/notif.php", (tabPresence) => {
+  displayNotifPresence(tabPresence);
   });
 }
 
@@ -59,7 +59,8 @@ function displayNotifAccount(account) {
 }
 
 function displayNotifPresence(presence) {
-  const notifTextPresence =
+  console.log(presence);
+    const notifTextPresence =
     presence.presence.count != 0
       ? `Il y avait ${presence.presence.count} ${
           presence.presence.count == 1

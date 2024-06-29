@@ -1,9 +1,12 @@
 <?php
-	$annee = shell_exec("date +%Y");
-	$mois = shell_exec("date +%m");
+	// $annee = shell_exec("date +%Y");
+	// $mois = shell_exec("date +%m");
 
-	$annee = trim($annee);
-	$mois = trim($mois);
+	// $annee = trim($annee);
+	// $mois = trim($mois);
+
+	$annee = 2024;
+	$mois = "03";
 
 	$nbrJour = 0;
 
@@ -48,39 +51,81 @@
 	}
 	$mysql = mysqli_connect("localhost", "root", "") or die("Tsy mandeha");
 	mysqli_select_db($mysql, "mit");
-
-	$rt = mysqli_query($mysql,
-	"SELECT l3 FROM consommation WHERE TimeD LIKE \"$annee-$mois-%\";");
-	$res = mysqli_fetch_all($rt);
 	
+	for ($i=1; $i<=$nbrJour; $i++)
+	{
+		$rt = mysqli_query($mysql,
+		"SELECT l3 FROM consommation WHERE TimeD=\"$annee-$mois-$i\";");
+		$res = mysqli_fetch_array($rt);
+		if (!is_null($res))
+		{
+			$tmp = $res[0];
+			$dataPerDay[] = $tmp;
+		}
+		else{
+			$dataPerDay[] = 0;
+		}
+	}
+
 	$rt = mysqli_query($mysql, "SELECT `site1`, `site2`, `site3`, `site4`, `other` FROM `site`
 						WHERE timePassed LIKE \"$annee-$mois-%\" AND Levels=\"l3\"");
 	$result = mysqli_fetch_all($rt);
 	$other = 0;
+	
 	foreach($result as $elmt)
 	{
 		for($i = 0; $i <= 3; $i++)
 		{
 			$splt = explode("!", $elmt[$i]);
-			$data1[$splt[0]] += $splt[1];
+			$dataTmp[$splt[0]] += $splt[1];
 		}
 		$other += $elmt[4];
 	}
+
+	$tmp32 = $dataTmp;
+	sort($tmp32);
+
+	for ($i=count($tmp32)-1; $i>3; $i--)
+	{
+		foreach($dataTmp as $key => $value)
+		{
+			if ($tmp32[i] == $value)
+			{
+				$data1[$key] = $value;
+				break;
+			}
+		}			
+	}
+	
 	$data1['other'] = $other;
 
-	foreach($res as $elmt)
-		foreach($elmt as $e)
-			$connexion[] = $e;
 			
 	for ($i = 1; $i<=$nbrJour; $i++)
 	{
 		$lbl[] = "$i";
 	}
 	
-	$data0['labels'] = $lbl;
-	$data0['data'] = $connexion;
+	$rt = mysqli_query($mysql, "SELECT timePassed FROM `site`");
+	$result = mysqli_fetch_all($rt);
+
+	foreach($result as $elmt)
+	{
+		foreach($elmt as $e)
+		{
+			$split = explode('-', $e);
+			$tmp34[$split[0]] ++; 
+		}
+	}
 	
-	$data[] = [$data0, $data1]; 
+	foreach($tmp34 as $key=>$value)
+	{
+		$year[] = $key;
+	}
+
+	$data0['labels'] = $lbl;
+	$data0['data'] = $dataPerDay;
+	
+	$data[] = [$year, $data0, $data1]; 
 	
 	$json = json_encode($data);
 	header('content-type: application/json');	
